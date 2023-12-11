@@ -1,0 +1,261 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* _______________________3d Card ______________________ */
+.cardha {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.contentha {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  /* color: #e8e8e8; */
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.contentha .heading {
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.contentha .para {
+  line-height: 1.5;
+}
+
+.contentha .btn {
+  color: #e8e8e8;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cardha::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.cardha:hover::before {
+  height: 100%;
+}
+
+.cardha:hover {
+  box-shadow: none;
+}
+
+.cardha:hover .btn {
+  color: #212121;
+  background: #e8e8e8;
+}
+
+.contentha .btn:hover {
+  outline: 2px solid #e8e8e8;
+  background: transparent;
+  color: #e8e8e8;
+}
+
+.contentha .btn:active {
+  box-shadow: none;
+}
+
+/* ___________________________Button________________________ */
+
+.button {
+  font-weight: bold;
+  color: white;
+  border: 2px solid black;
+  border-radius: 0.1rem;
+  width: 95.02px;
+  height: 42.66px;
+  border: none;
+  background-color: rgb(177, 115, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button .span-mother {
+  display: flex;
+  overflow: hidden;
+}
+
+.button:hover .span-mother {
+  position: absolute;
+}
+
+.button:hover .span-mother span {
+  transform: translateY(1.2em);
+}
+
+.button .span-mother span:nth-child(1) {
+  transition: 0.2s;
+}
+
+.button .span-mother span:nth-child(2) {
+  transition: 0.3s;
+}
+
+.button .span-mother span:nth-child(3) {
+  transition: 0.4s;
+}
+
+.button .span-mother span:nth-child(4) {
+  transition: 0.5s;
+}
+
+.button .span-mother span:nth-child(5) {
+  transition: 0.6s;
+}
+
+.button .span-mother span:nth-child(6) {
+  transition: 0.7s;
+}
+
+.button .span-mother2 {
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+}
+
+.button .span-mother2 span {
+  transform: translateY(-1.2em);
+}
+
+.button:hover .span-mother2 span {
+  transform: translateY(0);
+}
+
+.button .span-mother2 span {
+  transition: 0.2s;
+}
+
+.button .span-mother2 span:nth-child(2) {
+  transition: 0.3s;
+}
+
+.button .span-mother2 span:nth-child(3) {
+  transition: 0.4s;
+}
+
+.button .span-mother2 span:nth-child(4) {
+  transition: 0.5s;
+}
+
+.button .span-mother2 span:nth-child(5) {
+  transition: 0.6s;
+}
+
+.button .span-mother2 span:nth-child(6) {
+  transition: 0.7s;
+}
+
+/* ___________________________Youtube Video ________________ */
+
+.cardyo {
+  width: 330px;
+  height: 294px;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+.cardyo-inner {
+  width: inherit;
+  height: inherit;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+.cardyo:hover {
+  transform: scale(1.04) rotate(1deg);
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(#fffb2a, #ffd711);
+  border-radius: 50%;
+  position: absolute;
+  animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+  top: -25px;
+  left: -25px;
+}
+
+.circle:nth-child(2) {
+  bottom: -25px;
+  right: -25px;
+  animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(10px);
+  }
+}

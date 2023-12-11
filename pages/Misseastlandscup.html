@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ___________FontAwesome icon Link _____________________ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css    "
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="stylesheet" href="path/to/aos.css" />
+
+    <title>Miss Eastlands</title>
+  </head>
+  <body>
+    <!-- __________________--Header Portion --_______________________ -->
+
+    <div
+      class="text-white bg-yellow-600 flex-wrap flex justify-around items-center"
+    >
+      <div class="flex justify-around items-center">
+        <div class="flex justify-around items-center gap-5">
+          <i class="fa-sharp fa-solid fa-location-dot"></i>
+          <p class="text-sm">Quarry Drive, Donholm Nairobi Kenya</p>
+          |
+        </div>
+        <div class="flex justify-around items-center gap-3">
+          <i class="fa-solid fa-phone fa-fade"></i>
+          <p class="text-sm">+254 776 826 051</p>
+        </div>
+      </div>
+      <div class="flex justify-around gap-4 items-center">
+        <div class="flex justify-around items-center gap-3">
+          <i class="fa-solid fa-message"></i>
+          <p class="text-sm">contact@misseastlands.org</p>
+        </div>
+        <div class="flex justify-around items-center gap-8">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin"></i>
+        </div>
+      </div>
+    </div>
+
+    <nav class="bg-black shadow-md" x-data="{navbarOpen:false}">
+      <!-- container -->
+      <div class="flex flex-wrap justify-around px-4 py-4 mx-auto lg:space-x-4">
+        <!-- brand -->
+        <a
+          href="#"
+          class="inline-flex p-2 text-xl font-bold tracking-widere w-48"
+          ><img src="../images/logo.png" alt=""
+        /></a>
+        <!-- brand -->
+        <!-- toggler btn -->
+        <button
+          class="inline-flex items-center justify-center w-10 h-10 ml-auto text-white border rounded-md outline-none lg:hidden focus:outline-none"
+          @click="navbarOpen = !navbarOpen"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+        <!-- toggler btn -->
+        <!-- menu -->
+        <div
+          class="w-full mt-2 lg:inline-flex lg:w-auto lg:mt-0"
+          :class="{'hidden':!navbarOpen,'flex':navbarOpen}"
+        >
+          <ul
+            class="flex flex-col w-full space-y-2 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-2"
+          >
+            <li>
+              <a
+                href="./Corporate_Parthner.html"
+                class="flex px-4 py-2 font-medium text-white rounded-md hover:bg-gray-600"
+                >Corporate Partners</a
+              >
+            </li>
+            <!-- dropdown -->
+            <li class="relative" x-data="{dropdownOpen:false}">
+              <button
+                href="#"
+                class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-gray-600"
+                @click="dropdownOpen = !dropdownOpen"
+              >
+                Programs <i class="fas fa-angle-down ml-2 mt-1"></i>
+              </button>
+              <!-- dropdown menu -->
+              <div
+                class="right-0 z-50 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+                :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}"
+                @click.away="dropdownOpen = false"
+              >
+                <ul class="space-y-2 lg:w-48">
+                  <li>
+                    <a
+                      href="./MissEastlandSmile.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >MISS EASTLANDSMILE</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./MissEastLandFood.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >MISS EASTLANDS FOOD PANTRY</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./Misseastlandscup.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >MISSEASLANDS CUP</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./Silc.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >SILC</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- dropdown menu -->
+            </li>
+            <!-- dropdown -->
+            <li class="relative" x-data="{dropdownOpen:false}">
+              <button
+                href="#"
+                class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-gray-600"
+                @click="dropdownOpen = !dropdownOpen"
+              >
+                Face of Eastlands <i class="fas fa-angle-down ml-2 mt-1"></i>
+              </button>
+              <!-- dropdown menu -->
+              <div
+                class="right-0 z-50 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+                :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}"
+                @click.away="dropdownOpen = false"
+              >
+                <ul class="space-y-2 lg:w-48">
+                  <li>
+                    <a
+                      href="./Prize.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >PRIZES</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./About.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >ABOUT</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./Pagent.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >PAGEANT</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./Bodybuilding.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >BODY BUILDING</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./MissEastLands.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >MR EASTLANDS</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- dropdown menu -->
+            </li>
+            <!-- dropdown -->
+            <li class="relative" x-data="{dropdownOpen:false}">
+              <button
+                href="#"
+                class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-gray-600"
+                @click="dropdownOpen = !dropdownOpen"
+              >
+                Miss Eastlandsmile <i class="fas fa-angle-down ml-2 mt-1"></i>
+              </button>
+              <!-- dropdown menu -->
+              <div
+                class="right-0 z-50 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+                :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}"
+                @click.away="dropdownOpen = false"
+              >
+                <ul class="space-y-2 lg:w-48">
+                
+                  
+                  <li>
+                    <a
+                      href="./Shop.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >SHOP</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- dropdown menu -->
+            </li>
+            <!-- dropdown -->
+            <li class="relative" x-data="{dropdownOpen:false}">
+              <button
+                href="#"
+                class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-gray-600"
+                @click="dropdownOpen = !dropdownOpen"
+              >
+                About Us <i class="fas fa-angle-down ml-2 mt-1"></i>
+              </button>
+              <!-- dropdown menu -->
+              <div
+                class="right-0 z-50 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+                :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}"
+                @click.away="dropdownOpen = false"
+              >
+                <ul class="space-y-2 lg:w-48">
+                  <li>
+                    <a
+                      href="./Whoweare.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >WHO WE ARE</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./Whatwedo.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >WHAT WE DO</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./OurInitiative.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >OUR INITIATIVE </a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./CoreValues.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >CORE VALUES </a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- dropdown menu -->
+            </li>
+            <!-- dropdown -->
+  
+            <a href="./Donate.html">  <button
+              class=" px-4 h-10 rounded-md w-24 text-white font-semibold bg-yellow-600 hover:bg-gray-500 hover:text-black" 
+            >
+              Donate
+            </button></a>
+          </ul>
+        </div>
+        <!-- menu -->
+      </div>
+      <!-- container -->
+    </nav>
+    <!-- _______________________Hero Section _____________________________________ -->
+
+    <div class="">
+      <div
+        class=" "
+        style="
+          background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+            url(../images/f.jpeg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          /* background-position: center; */
+          border-bottom-left-radius: 90px;
+          border-bottom-right-radius: 90px;
+          background-attachment: fixed;
+        "
+      >
+        <div
+          class="rounded-b-3xl flex justify-end items-center flex-col leading-loose"
+        >
+          <h1
+            class="lg:text-4xl mt-24 text-2xl font-bold text-yellow-600 text-center"
+          >
+            #MISSEASTLANDSCUP
+          </h1>
+          <p class="text-lg text-white">
+            Capturing vulnerable youth in soccer to establish youth groups based
+            on their team members’ common interests.
+          </p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#fff"
+            fill-opacity="1"
+            d="M0,32L80,64C160,96,320,160,480,208C640,256,800,288,960,261.3C1120,235,1280,149,1360,106.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- ______________________Section 2_______________________ -->
+    <!-- --------------------Secion 2_______________________________________ -->
+
+    <div class="flex flex-wrap justify-around mt-14">
+      <div class="lg:h-[500px] lg:w-5/12">
+        <div class="relative">
+          <div class="bg-gray-700 shadow-2xl rounded-full">
+            <img
+              src="../images/s.jpeg"
+              style="height: 400px; width: 500px; border-radius: 20px"
+              alt=""
+            />
+          </div>
+          <div
+            class="bg-white ml-28 hidden md:hidden lg:block lg:-mt-16 absolute p-1 rounded-2xl"
+          >
+            <img
+              src="../images/a.jpeg"
+              style="height: 400px; width: 500px; border-radius: 20px"
+              alt=""
+            />
+          </div>
+          <div
+            class="bg-white hidden md:hidden lg:block sm:h-40 sm:w-52 sm:-mt-28 lg:h-60 absolute ml-96 lg:-mt-60 rounded-md shadow-xl text-center lg:w-60"
+          >
+            <h1
+              class="lg:text-2xl text-center lg:my-20 text-lg font-bold text-gray-600"
+            >
+              EASTLANDS <br />
+              CUP
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="lg:h-96 lg:w-96 p-14 lg:p-0 lg:mt-10">
+        <div class="flex flex-col">
+          <h1 class="font-bold text-2xl lg:mt-11 leading-loose">
+            WHY MISS EASTLANDS CUP?
+          </h1>
+          <p class="text-base text-gray-600">
+            We raise a call to the society on a large scale, through ``Miss
+            Eastlands Cup`` and through the ``Miss Eastlands Organization`` we
+            are partnering with donors and sponsors to give and offer a
+            promotion/relegation structure to Eastlands’ teams and players to
+            develop their talents and get exposure to play at an elite level for
+            self-reliance and resiliency as well as expose Eastlands’ training
+            fields for provision of facilities from sponsors and cater for all
+            levels of ability within our community, ranging from Discovery Phase
+            all the way through to our Veterans (Masters)
+
+          </p>
+          <h1 class="font-bold text-4xl lg:mt-11 leading-loose">
+            OUR MISSION
+          </h1>
+          <p class="text-base text-gray-600">
+            To provide the opportunity for the junior and youth of Eastlands and surrounding areas to play football in an environment that is safe, enjoyable and allows them to develop and improve to the best of their ability. We continue to foster a friendly, constructive and inclusive environment for personal and professional development of all players, partners and families which also provides opportunities to assist the wider community.
+
+
+          </p>
+          
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- ___________________Section 3---------------- -->
+
+    
+    <div class="flex lg:mt-96 mt-12 " style="height: 90vh ">
+        <div class="bg-red-600 hidden lg:block">
+          <img
+            src="../images/wq.jpeg"
+            alt=""
+            style="height: 90vh; width: 50vw"
+          />
+        </div>
+        <div class="bg-red-900 lg:w-9/12 flex flex-col justify-center pl-9">
+          <div class="">
+            <h1 class="text-4xl text-center opacity-20 font-bold text-white leading-none">
+                SILC PROGRAM
+            </h1>
+            <h2 class="text-lg font-semibold text-white">
+                Building Bridges Through SILC Program among Youth in Sports:
+            </h2>
+            <p class="lg:w-9/12 text-sm mt-7 text-white">
+                SILC builds bridges between people on the move and neighbors towards a shared future of stability and promise. The SILC program builds a “bridge” for vulnerable youth in sports to move from poverty, displacement and despair, to a future in which they are skilled entrepreneurs and contributing members of a community. SILC is also a bridge for impoverished communities to become more prosperous as the youth's entrepreneurial activities benefit themselves, the children and communities from expanded services, better access food and other resources, more jobs, and increased economic activity. As an organized group/club/teams, Miss Eastlands Organization is optimistic in establishing self-reliant and resilient members of the teams to be able to support themselves in their teams/clubs/groups.
+
+            </p>
+            <button
+              class="text-white  text-sm lg:text-lg mt-1 pt-3 pb-3 pl-6 pr-6 rounded-full border-2 leading-loose"
+            >
+              LEARN MORE
+              <i class="fa fa-arrow-alt-circle-right"></i>
+            </button>
+          </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- ---------------------secion5------------------- -->
+
+    <div class="mt-36 px-9  lg:px-40">
+        <h1 class="text-2xl font-semibold text-yellow-600 text-center">TAKE ACTION<br/>
+        <span class="text-2xl font-semibold text-yellow-600 text-center">__________</span></h1>
+        <p class="text-lg text-center">Soccer for edutainment and empowerment is a proven solution for nourishing communities through dedicated and unified action. Join us in creating a global network of football funlovers that empowers Eastlands to defeat poverty.
+
+        </p>
+    </div>
+
+
+
+    <div class="mt-32">
+        <h1 class="text-2xl font-semibold text-yellow-600 text-center">GET INVOLVED</h1>
+
+
+
+        <div class="flex justify-around gap-12 items-center flex-wrap  mt-14">
+
+            <div class="h-64 bg-red-900 rounded-lg p-9 flex justify-center items-center shadow-2xl w-72">
+                <h1 class="text-2xl font-bold text-white  text-center">INVEST IN OUR MISSION</h1>
+            </div>
+            <div class="h-64 bg-red-900 p-6 rounded-lg flex justify-center items-center shadow-2xl w-72">
+                <h1 class="text-2xl font-bold text-white  text-center">JOIN MISS EASTLANDS CUP IN OUR MISSION </h1>
+            </div>
+            <div class="h-64 bg-red-900 p-6 rounded-lg flex justify-center items-center shadow-2xl w-72">
+                <h1 class="text-2xl font-bold text-white  text-center">GET THE LASTEST NEWS</h1>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- _______________________________________Section 6_____________________________ -->
+
+    <div class="bg-purple-700 mt-24">
+        <ul class="list-none flex items-center p-4 justify-around">
+          <li class="h-6 text-white text-2xl"><i class="fa fa-crown"></i></li>
+          <li class="text-sm ml-4 lg:ml-0 text-white">
+            The Search Is On For FACE OF EASTLANDS 2022. Just Complete A Short
+            Form To Get Started.
+          </li>
+          <li>
+            <button class="bg-black hidden lg:block py-3 px-4 text-white">
+              ENTER COMPETITION
+            </button>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- ___________________________________Fotter _______________________________ -->
+  
+      <div class="bg-black text-white flex flex-wrap justify-around py-20">
+        <div
+          style="width: 33%; background-color: #3d3d3d4c; border: 1px solid white"
+          class="py-5 px-3"
+        >
+          <img src="../images/logo.png" width="300px" alt="" />
+          <p class="lg:text-lg md:text-lg text-sm text-gray-600 mt-5">
+            Our work is about inspiring and engaging others to make a change in
+            the community at local level. It’s a collaboration between us, social
+            entrepreneurs-corporates,individuals, and civil society organisations.
+          </p>
+        </div>
+  
+        <div>
+          <h1 class="text-xl text-yellow-700">QUICK LINKS</h1>
+          <ul>
+            <li><i class="fa fa-long-arrow-right"></i> The Competition</li>
+            <li>
+              <i class="fa fa-long-arrow-right"></i> The Shop Miss EastlandSmile
+            </li>
+            <li><i class="fa fa-long-arrow-right"></i> The Interviews</li>
+            <li>
+              <i class="fa fa-long-arrow-right"></i> The News & Announcements
+            </li>
+            <li><i class="fa fa-long-arrow-right"></i> The Volunteer</li>
+            <li><i class="fa fa-long-arrow-right"></i> The Sponsorship</li>
+            <li><i class="fa fa-long-arrow-right"></i> The Resource Portal</li>
+          </ul>
+        </div>
+  
+        <div>
+          <h1 class="text-xl text-yellow-700">FACE OF EASTLANDS</h1>
+          <ul>
+            <li><i class="fa fa-long-arrow-right"></i> The Competition</li>
+            <li>
+              <i class="fa fa-long-arrow-right"></i> The Shop Miss EastlandSmile
+            </li>
+            <li><i class="fa fa-long-arrow-right"></i> The Interviews</li>
+            <li>
+              <i class="fa fa-long-arrow-right"></i> The News & Announcements
+            </li>
+            <li><i class="fa fa-long-arrow-right"></i> The Volunteer</li>
+            <li><i class="fa fa-long-arrow-right"></i> The Sponsorship</li>
+            <li><i class="fa fa-long-arrow-right"></i> The Resource Portal</li>
+          </ul>
+        </div>
+  
+        <div>
+          <h1 class="text-xl text-yellow-700">CONTACT US</h1>
+          <ul>
+            <li>
+              <i
+                class="fa-sharp fa-solid fa-location-dot leading-loose p-1"
+                style="color: #bc8a00"
+              ></i
+              >The Competition
+            </li>
+            <li>
+              <i
+                class="fa-sharp fa-solid fa-envelope leading-loose p-1"
+                style="color: #bc8a00"
+              ></i
+              >The Shop Miss EastlandSmile
+            </li>
+            <li>
+              <i
+                class="fa-sharp fa-solid fa-phone leading-loose p-1"
+                style="color: #bc8a00"
+              ></i>
+              The Interviews
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="h-14 bg-black py-3">
+        <hr />
+        <div class="flex justify-around text-white">
+          <div>
+            <h1 class="lg:text-lg md:text-lg text-sm">
+              © Copyright 2023 Miss Eastlands. All Rights Reserved. Designed by
+              Rick <br />
+              +254727881462
+            </h1>
+          </div>
+          <div>
+            <ul class="flex gap-5 lg:text-lg md:text-lg text-sm">
+              <li>Leadership & Staff</li>
+              <li>Our History</li>
+              <li>Blog</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    <script type="module" src="/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  </body>
+</html>

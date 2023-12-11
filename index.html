@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ___________FontAwesome icon Link _____________________ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css    " />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="path/to/aos.css" />
+  <link rel="stylesheet" href="./firstpage.css">
+  <title>Miss Eastlands</title>
+
+  <style>
+    /* ---------------------Cards css----------------- */
+    .card p {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #666;
+    }
+
+    .card p.small {
+      font-size: 14px;
+    }
+
+    .go-corner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      overflow: hidden;
+      top: 0;
+      right: 0;
+      background-color: #00838d;
+      border-radius: 0 4px 0 32px;
+    }
+
+    .go-arrow {
+      margin-top: -4px;
+      margin-right: -4px;
+      color: white;
+      font-family: courier, sans;
+    }
+
+    .card1 {
+      display: block;
+      position: relative;
+      max-width: 262px;
+      background-color: #f2f8f9;
+      border-radius: 4px;
+      padding: 32px 24px;
+      /* line-height: 2em; */
+      margin: 12px;
+      text-decoration: none;
+      z-index: 0;
+      /* height: 50vh; */
+      overflow: hidden;
+    }
+
+    .card1:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -16px;
+      right: -16px;
+      background: #00838d;
+      height: 32px;
+      width: 32px;
+      border-radius: 32px;
+      transform: scale(1);
+      transform-origin: 50% 50%;
+      transition: transform 0.25s ease-out;
+    }
+
+    .card1:hover:before {
+      transform: scale(21);
+    }
+
+    .card1:hover p {
+      transition: all 0.3s ease-out;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .card1:hover h3 {
+      transition: all 0.3s ease-out;
+      color: #fff;
+    }
+
+    .card2 {
+      display: block;
+      top: 0px;
+      position: relative;
+      max-width: 262px;
+      background-color: #f2f8f9;
+      border-radius: 4px;
+      padding: 32px 24px;
+      margin: 12px;
+      text-decoration: none;
+      z-index: 0;
+      overflow: hidden;
+      border: 1px solid #f2f8f9;
+    }
+
+    .card2:hover {
+      transition: all 0.2s ease-out;
+      box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+      top: -4px;
+      border: 1px solid #ccc;
+      background-color: white;
+    }
+
+    .card2:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -16px;
+      right: -16px;
+      background: #00838d;
+      height: 32px;
+      width: 32px;
+      border-radius: 32px;
+      transform: scale(2);
+      transform-origin: 50% 50%;
+      transition: transform 0.15s ease-out;
+    }
+
+    .card2:hover:before {
+      transform: scale(2.15);
+    }
+
+    .card3 {
+      display: block;
+      top: 0px;
+      position: relative;
+      max-width: 262px;
+      background-color: #f2f8f9;
+      border-radius: 4px;
+      padding: 32px 24px;
+      margin: 12px;
+      text-decoration: none;
+      overflow: hidden;
+      border: 1px solid #f2f8f9;
+    }
+
+    .card3 .go-corner {
+      opacity: 0.7;
+    }
+
+    .card3:hover {
+      border: 1px solid #00838d;
+      box-shadow: 0px 0px 999px 999px rgba(255, 255, 255, 0.5);
+      z-index: 500;
+    }
+
+    .card3:hover p {
+      color: #00838d;
+    }
+
+    .card3:hover .go-corner {
+      transition: opactiy 0.3s linear;
+      opacity: 1;
+    }
+
+    .card4 {
+      display: block;
+      top: 0px;
+      position: relative;
+      max-width: 262px;
+      background-color: #fff;
+      border-radius: 4px;
+      padding: 32px 24px;
+      margin: 12px;
+      text-decoration: none;
+      overflow: hidden;
+      border: 1px solid #ccc;
+    }
+
+    .card4 .go-corner {
+      background-color: #00838d;
+      height: 100%;
+      width: 16px;
+      padding-right: 9px;
+      border-radius: 0;
+      transform: skew(6deg);
+      margin-right: -36px;
+      align-items: start;
+      background-image: linear-gradient(-45deg, #8f479a 1%, #dc2a74 100%);
+    }
+
+    .card4 .go-arrow {
+      transform: skew(-6deg);
+      margin-left: -2px;
+      margin-top: 9px;
+      opacity: 0;
+    }
+
+    .card4:hover {
+      border: 1px solid #cd3d73;
+    }
+
+    .card4 h3 {
+      margin-top: 8px;
+    }
+
+    .card4:hover .go-corner {
+      margin-right: -12px;
+    }
+
+    .card4:hover .go-arrow {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-200 ">
+  <!-- __________________--Header Portion --_______________________ -->
+
+  <nav class="bg-black shadow-md" x-data="{navbarOpen:false}">
+    <!-- container -->
+    <div class="flex flex-wrap justify-around px-4 py-4 mx-auto lg:space-x-4">
+      <!-- brand -->
+      <a href="#" class="inline-flex p-2 text-xl font-bold tracking-widere w-48"><img src="./images/logo.png"
+          alt="" /></a>
+      <!-- brand -->
+      <!-- toggler btn -->
+      <button
+        class="inline-flex items-center justify-center w-10 h-10 ml-auto text-white border rounded-md outline-none lg:hidden focus:outline-none"
+        @click="navbarOpen = !navbarOpen">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <!-- toggler btn -->
+      <!-- menu -->
+      <div class="w-full mt-2 lg:inline-flex lg:w-auto lg:mt-0" :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
+        <ul class="flex flex-col w-full space-y-2 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-2">
+          <li>
+            <a href="./pages/Corporate_Parthner.html"
+              class="flex px-4 py-2 font-medium text-white rounded-md hover:bg-gray-600">Corporate Partners</a>
+          </li>
+          <!-- dropdown -->
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button href="#"
+              class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-gray-600"
+              @click="dropdownOpen = !dropdownOpen">
+              Programs <i class="fas fa-angle-down ml-2 mt-1"></i>
+            </button>
+            <!-- dropdown menu -->
+            <div class="right-0 z-50 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+              :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}" @click.away="dropdownOpen = false">
+              <ul class="space-y-2 lg:w-48">
+                <li>
+                  <a href="./pages/MissEastlandSmile.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">MISS
+                    EASTLANDSMILE</a>
+                </li>
+                <li>
+                  <a href="./pages/MissEastLandFood.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">MISS
+                    EASTLANDS FOOD PANTRY</a>
+                </li>
+                <li>
+                  <a href="./pages/Misseastlandscup.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">MISSEASLANDS
+                    CUP</a>
+                </li>
+                <li>
+                  <a href="./pages/Silc.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">SILC</a>
+                </li>
+              </ul>
+            </div>
+            <!-- dropdown menu -->
+          </li>
+          <!-- dropdown -->
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button href="#"
+              class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-gray-600"
+              @click="dropdownOpen = !dropdownOpen">
+              Face of Eastlands <i class="fas fa-angle-down ml-2 mt-1"></i>
+            </button>
+            <!-- dropdown menu -->
+            <div class="right-0 z-50 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+              :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}" @click.away="dropdownOpen = false">
+              <ul class="space-y-2 lg:w-48">
+                <li>
+                  <a href="./pages/Prize.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">PRIZES</a>
+                </li>
+                <li>
+                  <a href="./pages/About.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">ABOUT</a>
+                </li>
+                <li>
+                <li>
+                  <a href="./pages/MissEastLands.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">MR
+                    EASTLANDS</a>
+                </li>
+                <a href="./pages/Pagent.html"
+                  class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">PAGEANT</a>
+          </li>
+          <li>
+            <a href="./pages/Bodybuilding.html"
+              class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">BODY BUILDING</a>
+          </li>
+        </ul>
+      </div>
+      <!-- dropdown menu -->
+      </li>
+      <!-- dropdown -->
+      <li class="relative" x-data="{dropdownOpen:false}">
+        <button href="#"
+          class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-gray-600"
+          @click="dropdownOpen = !dropdownOpen">
+          Miss Eastlandsmile <i class="fas fa-angle-down ml-2 mt-1"></i>
+        </button>
+        <!-- dropdown menu -->
+        <div class="right-0 z-50 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+          :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}" @click.away="dropdownOpen = false">
+          <ul class="space-y-2 lg:w-48">
+
+
+            <li>
+              <a href="./pages/Shop.html"
+                class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">SHOP</a>
+            </li>
+          </ul>
+        </div>
+        <!-- dropdown menu -->
+      </li>
+      <!-- dropdown -->
+      <li class="relative" x-data="{dropdownOpen:false}">
+        <button href="#"
+          class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-gray-600"
+          @click="dropdownOpen = !dropdownOpen">
+          About Us <i class="fas fa-angle-down ml-2 mt-1"></i>
+        </button>
+        <!-- dropdown menu -->
+        <div class="right-0 z-50 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+          :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}" @click.away="dropdownOpen = false">
+          <ul class="space-y-2 lg:w-48">
+            <li>
+              <a href="./pages/Whoweare.html"
+                class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">WHO WE ARE</a>
+            </li>
+            <li>
+              <a href="./pages/Whatwedo.html"
+                class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">WHAT WE DO</a>
+            </li>
+            <li>
+              <a href="./pages/OurInitiative.html"
+                class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">OUR INITIATIVE
+              </a>
+            </li>
+            <li>
+              <a href="./pages/CoreValues.html"
+                class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">CORE VALUES
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- dropdown menu -->
+      </li>
+      <!-- dropdown -->
+
+      <a href="./pages/Donate.html"> <button
+          class=" px-4 h-10 rounded-md w-24 text-white font-semibold bg-yellow-600 hover:bg-gray-500 hover:text-black">
+          Donate
+        </button></a>
+      </ul>
+    </div>
+    <!-- menu -->
+    </div>
+    <!-- container -->
+  </nav>
+
+  <!-- ______________________Slider Portion _______________________________ -->
+
+  <div class="mx-auto">
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
+      space-between="30" centered-slides="true" autoplay-delay="3500" autoplay-disable-on-interaction="false">
+      <swiper-slide class="bg-no-repeat" style="
+            background-image: url('./images/firstSlide1.jpg');
+            height: 90vh;
+          ">
+        <div class="h-full w-full" style="background-color: #0000009f">
+          <div class=" pt-32 text-center flex flex-col items-center">
+            <h1 class="text-4xl text-white font-bold leading-loose">
+              EMERGENCY FOOD DISTRIBUTION PLAN
+            </h1>
+            <h4 class="text-md font-medium leading-loose text-white w-7/12 text-center">
+              ENSURING FOOD-INSECURE INDIVIDUALS THROUGHOUT EASTLANDS HAVE
+              ACCESS TO FOOD DURING THE COVID-19 PANDEMIC.
+            </h4>
+            <button
+              class="text-white font-semibold text-lg mt-4 pt-3 pb-3 pl-6 pr-6 rounded-full border-2 leading-loose">
+              Support Food Pantry
+            </button>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide class="bg-no-repeat" style="
+            background-image: url('./images/firstSlide2.jpg');
+            height: 90vh;
+            width: 100%;
+          ">
+        <div class="h-full" style="background-color: #0000009f; width: 100%; height: 100vh">
+          <div class=" pt-32 text-center flex flex-col items-center">
+            <h1 class="text-4xl text-white font-bold leading-loose">
+              EASTLANDS SOCIAL ECONOMIC EMPOWERMENT
+            </h1>
+            <h4 class="text-md font-medium leading-loose text-white w-7/12 text-center">
+              SAVINGS AND INTERNAL LENDING GROUPS FOR DECENT WORK AND ECONOMIC
+              GROWTH.
+            </h4>
+            <button
+              class="text-white font-semibold text-lg mt-4 pt-3 pb-3 pl-6 pr-6 rounded-full border-2 leading-loose">
+              Become A Facilitator
+            </button>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide class="bg-no-repeat bg-cover" style="
+            background-image: url('./images/firstSlide3.jpg');
+            height: 90vh;
+            width: 100%;
+          ">
+        <div class="h-full" style="background-color: #0000009f">
+          <div class=" pt-32 text-center flex flex-col items-center">
+            <h1 class="text-4xl text-white font-bold leading-loose">
+              BEAUTY FOR A CAUSE
+            </h1>
+            <h4 class="text-md font-medium leading-loose text-white w-7/12 text-center">
+              BEAUTY IS NOT JUST BRAND, A PRODUCT, OR A SERVICE, BEAUTY IS
+              ALSO A SOCIAL COMMITMENT. THERE ARE IMPORTANT ROLES THAT BEAUTY
+              PLAYS TO CHANGE ONE’S LIFE.
+            </h4>
+            <button
+              class="text-white font-semibold text-lg mt-4 pt-3 pb-3 pl-6 pr-6 rounded-full border-2 leading-loose">
+              View Proposal
+            </button>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+
+  <!-- ___________________________--Cards Portion --_________________________ -->
+
+  <div class="container flex justify-center gap-x-16 gap-y-9 flex-wrap mt-9">
+    <div class="h-96 bg-white flex flex-col justify-center p-7 rounded-xl w-96">
+      <h1 class="text-xl font-semibold">
+        THE SEARCH IS ON FOR FACE OF EASTLANDS 2022 <br />
+        <span class="text-center font-extrabold text-yellow-600">__________</span>
+      </h1>
+      <p class="text-lg text-gray-500 mt-5">
+        Just Complete A Short Form To Get Started.
+      </p>
+      <div class="flex gap-4 mt-5">
+        <div class="text-6xl text-yellow-600">
+          <i class="fa fa-crown"></i>
+        </div>
+        <div>
+          <h1 class="text-lg font-medium">Helping</h1>
+          <p>+254 776 826 051</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-96 bg-white flex flex-col justify-center p-7 rounded-xl w-96">
+      <h1 class="text-xl font-semibold">WE NEED YOUR SUPPORT</h1>
+      <br />
+      <span class="text-xl font-extrabold text-yellow-600">__________</span>
+      <p class="text-lg text-gray-500 mt-5">
+        To help our young and vulnerable lactating mothers. Let's eradicate
+        dumping of newborns!.ed.
+      </p>
+      <div class="flex gap-4 mt-5">
+        <div class="text-6xl text-yellow-600">
+          <i class="fa fa-donate"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-yellow-600 mt-7">
+            DONATE NOW
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col justify-center rounded-xl">
+      <h1 class="text-xl ml-6 text-yellow-600 font-semibold">
+        CREATING GREATER OPPORTUNITIES
+      </h1>
+      <h1 class="text-2xl mt-12 ml-6 font-semibold">
+        WITH SOCIAL ENTREPRENEURS
+      </h1>
+    </div>
+
+    <div class="p-7 rounded-xl lg:w-6/12">
+      <p class="text-lg text-gray-500 mt-5">
+        Miss Eastlands Social Entrepreneurship is all about making a positive
+        impact. By working with pioneers and pathfinders who use their
+        business as a way to make everyday life betterfor those who need it
+        most, we strive towards a more equal and inclusive society.
+      </p>
+    </div>
+  </div>
+
+  <!-- ______________________Section 3 __________________ -->
+
+  <div class="flex flex-wrap justify-around mt-14">
+    <div class="lg:h-[500px] lg:w-5/12">
+      <div class="relative">
+        <div class="bg-gray-700 shadow-2xl rounded-full">
+          <img src="./images/Hero2.jpeg" style="height: 400px; width: 500px; border-radius: 20px" alt="" />
+        </div>
+        <div class="bg-white ml-28 hidden md:hidden lg:block lg:-mt-16 absolute p-1 rounded-2xl">
+          <img src="./images/Hero1.jpeg" style="height: 400px; width: 500px; border-radius: 20px" alt="" />
+        </div>
+        <div
+          class="bg-white hidden md:hidden lg:block sm:h-40 sm:w-52 sm:-mt-28 lg:h-60 absolute ml-96 lg:-mt-60 rounded-md shadow-xl text-center lg:w-60">
+          <h1 class="lg:text-2xl text-center lg:my-20 text-lg font-bold text-gray-600">
+            WE EMPOWER <br />
+            YOUNG PEOPLE
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="lg:h-96 lg:w-96 p-14 lg:p-0 lg:mt-10">
+      <div class="flex flex-col">
+        <h1 class="font-bold text-2xl lg:mt-11 leading-loose">
+          FOR BETTER EVERYDAY LIVES
+        </h1>
+        <p class="text-base text-gray-600">
+          There are millions of people in slums and informal settlements of
+          Nairobi’s Eastlands whose lives are a constant struggle to provide
+          for themselves and their families. By backing and working with
+          social entrepreneurs, we create new opportunities and contribute to
+          better everyday lives around Eastlands. <br /><br />
+
+          Together with dedicated partners and experienced Miss Eastlands
+          Organization’s co-workers, we develop programmes, products and
+          services to scale up social entrepreneurs' businesses and increase
+          their impact.
+        </p>
+      </div>
+    </div>
+    <div class="flex lg:mt-96" style="height: 90vh">
+      <div class="bg-red-600 hidden lg:block">
+        <img src="./images/Hero3.jpg" alt="" style="height: 90vh; width: 50vw" />
+      </div>
+      <div class="bg-red-900 lg:w-9/12 flex flex-col justify-center pl-9">
+        <div class="">
+          <h1 class="text-6xl opacity-20 font-bold text-white leading-none">
+            PARTNERSHIPS
+          </h1>
+          <h2 class="text-xl font-semibold text-white">
+            Different Kinds Of Partnerships
+          </h2>
+          <p class="lg:w-9/12 mt-7 text-white">
+            We team up with donors, corporates, business, individuals and
+            like-minded stakeholders as well as community-based organizations
+            to support established social entrepreneurs to increase their
+            impact. <br /><br />
+            We collaborate with social entrepreneurs to produce unique items
+            and develop services for Miss Eastlands Organization – that way we
+            contribute to creating jobs for those who need it the most.
+          </p>
+          <button class="text-white font-semibold text-lg mt-4 pt-3 pb-3 pl-6 pr-6 rounded-full border-2 leading-loose">
+            Explore Our Parthnerships
+            <i class="fa fa-arrow-alt-circle-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ______________________Section 4____________________ -->
+
+  <div>
+    <div class="flex justify-center items-center flex-col p-7">
+      <h1 class="text-2xl text-yellow-600 font-bold">WHERE WE OPERATE</h1>
+      <span class="text-2xl text-yellow-600 font-bold">_________</span>
+      <p class="text-center text-lg text-gray-500">
+        Exclusion and inequality are global challenges. But we must solve it
+        at local and community levels. Our ambition is to operate in all slums
+        and informal settlements of Nairobi’s Eastlands region to create a
+        better everyday life for as many people as possible.
+      </p>
+    </div>
+
+    <div class="flex justify-center rounded-xl items-center">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.35869079496!2d36.682578440414815!3d-1.3028602774149471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1685760344070!5m2!1sen!2sus"
+        width="1000" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <!-- ________________Section 5__________________________ -->
+  <h1 class="text-3xl font-semibold text-yellow-600 mt-11 ml-10">
+    SOCIAL ENTREPRENEUR STORIES <br />
+    <span class="text-center font-extrabold text-yellow-600">__________</span>
+  </h1>
+  <div class="flex p-9 flex-wrap">
+    <div class="lg:w-2/5">
+      <div></div>
+      <img src="./images/hero4.jpg" alt="" />
+    </div>
+    <div class="md:w-full p-9 lg:w-3/5">
+      <h1 class="text-3xl font-semibold">
+        Improving Young Mothers’ Living Conditions In Slums And Informal
+        Settlements Of Nairobi’s Eastlands
+      </h1>
+      <p class="text-lg text-gray-500">
+        One of the social entrepreneurs we collaborate with is Pamela Gatwiri
+        of PAM NAIL LACQUE. Through her business Pam Nail Polish, she trains
+        young and vulnerable lactating mothers who want to work in the beauty
+        sector with the aim to learn, develop and practice as required by the
+        market. The emphasis is put on the trainee to acquire the ability to
+        perform as confident and competent beautician. There are thousands of
+        young mothers in slums living in poor conditions which pose health
+        risks.
+
+        <a href="#" class="text-blue-700 underline"> Read full story</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- _____________________Secion 6__________________________________ -->
+  <h1 class="text-2xl font-bold text-yellow-600 text-center mt-24">
+    OUR FOCUS AREAS <br />
+    <span class="text-center font-extrabold text-yellow-600">__________</span>
+  </h1>
+  <div class="flex justify-around flex-wrap gap-y-9">
+    <div class="">
+      <div class="card leading-loose h-52 shadow-sm">
+        <a class="card1" href="#">
+          <h1 class="text-lg font-semibold">INCLUSION</h1>
+          <p class="leading-loose">
+            Social entrepreneurs give people the opportunities to play and
+            active part in society Through job and income opportunities. it
+            also provide and facilitate people to do some thing differnt in
+            there life.
+          </p>
+          <div class="go-corner" href="#">
+            <div class="go-arrow">→</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="card leading-loose h-56 shadow-sm">
+        <a class="card1" href="#">
+          <h1 class="text-lg font-semibold">LIVELIHOOD</h1>
+          <p class="leading-loose">
+            With increase and quality comes a better change of dignified life,
+            where people have the possibility to provide for themselve and
+            their families in a sustainable way.
+          </p>
+          <div class="go-corner" href="#">
+            <div class="go-arrow">→</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="card leading-loose h-56 shadow-sm">
+        <a class="card1" href="#">
+          <h1 class="text-lg font-semibold">EQUALITY</h1>
+          <p class="leading-loose">
+            Social entrepreneurs business that look to chage the situation for
+            people not being treated equal , especially in status , right and
+            opportunities - allowing them to move a decent living .
+          </p>
+          <div class="go-corner" href="#">
+            <div class="go-arrow">→</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ___---_____________________Secion 7__________________________ -->
+
+  <div>
+    <h1 class="text-3xl font-semibold text-yellow-600 mt-11 text-center mt-40">
+      THIS IS HOW WE WORK<br />
+      <span class="text-center font-extrabold text-yellow-600">__________</span>
+    </h1>
+    <div class="">
+      <h1 class="text-3xl font-semibold mt-11 text-center">
+        PARTNERSHIP THAT INSPIRE CHANGE
+      </h1>
+      <p class="text-center mt-6 w-4/5 mx-auto text-lg text-gray-500">
+        Our work is about inspiring and engaging others to make a change in
+        the community at local level. It’s a collaboration between us, social
+        entrepreneurs-corporates,individuals, and civil society organisations.
+        By partnering with social entrepreneurs and connecting them with those
+        in need we create real and sustainable opportunities. To highlight the
+        equal partnering, we focus on mutual learning and build on each
+        other’s strengths. We look at how to use our knowledge and experience
+        to help both the people we serve and social entrepreneurs grow and
+        have a bigger impact in the community-it’s all about win-win!
+      </p>
+    </div>
+  </div>
+
+  <!-- __________________________Section 8___________________________ -->
+  <div>
+    <h1 class="text-2xl font-bold text-yellow-600 pb-9 text-center mt-24">
+      THE APPROACH TO ACHIEVE OUR GOALS <br />
+      <span class="text-center font-extrabold text-yellow-600">__________</span>
+    </h1>
+
+    <div class="flex justify-around mx-auto mt-30 flex-wrap gap-6">
+      <div class="cardha">
+        <div class="contentha">
+          <div>
+            <h1 class="text-center">
+              <i class="fa-solid text-4xl fa-laptop-file fa-2xl" style="color: #ee8711;"></i>
+            </h1>
+            <p class="heading text-center">Empowerment</p>
+            <p class="para text-center">
+              We focus on empowerment of vulnerable and marginalised people
+              and the support of social entrepreneurs and other partners. We
+              believe this is the only way to contribute to significant and
+              lasting change.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="cardha">
+        <div class="contentha">
+          <div>
+            <h1 class="text-center">
+              <i class="fa-solid text-4xl fa-magnifying-glass-chart fa-2xl" style="color: #ee8711;"></i>
+            </h1>
+            <p class="heading text-center">Innovation</p>
+            <p class="para text-center">
+              We work with piloting and continuous innovation, both by finding
+              new solutions with partners and supporting the activities of
+              social entrepreneurs.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="cardha">
+        <div class="contentha">
+          <div>
+            <h1 class="text-center">
+              <i class="fa-solid text-4xl fa-money-bill-trend-up fa-2xl" style="color: #ffae00;"></i>
+            </h1>
+            <p class="heading text-center">Lead By Example</p>
+            <p class="para text-center">
+              We lead by what we do and by sharing our learnings to enable
+              others to advance the social entrepreneurship agenda.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="cardha">
+        <div class="contentha">
+          <div>
+            <h1 class="text-center">
+              <i class="fa-solid text-4xl fa-user-plus fa-2xl" style="color: #ff9500;"></i>
+            </h1>
+            <p class="heading text-center">Co-Creation</p>
+            <p class="para text-center">
+              By co-creating, we find new ways of working, discover synergies
+              and encourage learning and sharing of competencies.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="cardha">
+        <div class="contentha">
+          <div>
+            <h1 class="text-center">
+              <i class="fa-solid text-4xl fa-face-smile fa-2xl" style="color: #ffae00;"></i>
+            </h1>
+            <p class="heading text-center">Trust</p>
+            <p class="para text-center">
+              Building strong and long-lasting relationships internally and
+              externally is crucial to maximise our outcome.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="cardha">
+        <div class="contentha">
+          <div>
+            <h1 class="text-center">
+              <i class="fa-solid text-4xl fa-handshake-simple fa-2xl" style="color: #ffc800;"></i>
+            </h1>
+            <p class="heading text-center">Transparency</p>
+            <p class="para text-center">
+              We are open about both positive and negative experiences,
+              learnings and results and strive to be clear about expectations,
+              division of responsibilities and labour, and how to solve issues
+              that we may encounter on the way, both internally and
+              externally.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- __________________________Secion 9________________________________ -->
+
+  <div class="flex flex-wrap justify-around items-center mt-32">
+    <div class="w-96 lg:w-3/5">
+      <h1 class="text-3xl font-semibold text-yellow-600 mt-40">
+        MENTIONED ON
+      </h1>
+      <span class="text-center font-extrabold text-3xl text-yellow-600">__________</span>
+      <p class="text-lg text-gray-500">
+        We stand for empowering vulnerable youth and young at most risk
+        lactating mothers across Eastlands’ slums and informal settlements to
+        be the best they can be through leadership, talent, communication
+        skills and smarts.
+      </p>
+
+      <button class="button mt-3">
+        <span class="span-mother">
+          <span>B</span>
+          <span>u</span>
+          <span>t</span>
+          <span>t</span>
+          <span>o</span>
+          <span>n</span>
+        </span>
+        <span class="span-mother2">
+          <span>B</span>
+          <span>u</span>
+          <span>t</span>
+          <span>t</span>
+          <span>o</span>
+          <span>n</span>
+        </span>
+      </button>
+    </div>
+
+    <div class="mt-8">
+      <div class="max-w-md mx-auto">
+        <form class="bg-white shadow-2xl rounded px-8 pt-6 pb-8 mb-4">
+          <h1 class="text-3xl font-semibold text-center">
+            Write to Us <br /><span class="text-center font-extrabold text-yellow-600">__________</span>
+          </h1>
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="name" type="text" placeholder="Your Name" />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email" type="email" placeholder="Your Email" />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Phone Number</label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="phone" type="tel" placeholder="Your Phone Number" />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+            <textarea
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="message" placeholder="Your Message"></textarea>
+          </div>
+          <div class="flex items-center justify-center">
+            <button class="button mt-3">
+              <span class="span-mother">
+                <span>S</span>
+                <span>U</span>
+                <span>B</span>
+
+                <span>M</span>
+                <span>I</span>
+                <span>T</span>
+              </span>
+              <span class="span-mother2">
+                <span>S</span>
+                <span>U</span>
+                <span>B</span>
+
+                <span>M</span>
+                <span>I</span>
+                <span>T</span>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ___________________________________Section 10____________________________ -->
+
+  <div>
+    <h1 class="text-3xl font-semibold text-yellow-600 text-center mt-11 ml-10">
+      SOCIAL ENTREPRENEUR STORIES <br />
+      <span class="text-center font-extrabold text-yellow-600">__________</span>
+    </h1>
+
+    <div class="flex justify-around flex-wrap gap-x-8">
+      <div class="cardyo mt-40">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="cardyo-inner">
+          <div>
+            <iframe width="330" height="215" src="https://www.youtube.com/embed/u7gGd7dQKIs"
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;  " allowfullscreen></iframe>
+            <h1 class="font-semibold mt-3 text-center">
+              ELVINA AKOTH CANNOT PASS HER STOOL NORMA
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardyo mt-40">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="cardyo-inner">
+          <div>
+            <iframe width="330" height="215" src="https://www.youtube.com/embed/q8s5UwUAx-M"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <h1 class="font-semibold mt-3 text-center">
+              Masking Nairobi Now
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardyo mt-40">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="cardyo-inner">
+          <div>
+            <iframe width="320" height="215" src="https://www.youtube.com/embed/rBPQQf2mWyI"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <h1 class="font-semibold mt-3 text-center">
+              Young Africa Works-Kenya Training Program by Equity Group
+              Foundation.
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardyo mt-40">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="cardyo-inner">
+          <div>
+            <iframe width="320" height="215" src="https://www.youtube.com/embed/Z7U0YY6YFec"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <h1 class="font-semibold mt-3 text-center">
+              Cultivate One Love Movement With Eveleen Mingoye mp4
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardyo mt-40">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="cardyo-inner">
+          <div>
+            <iframe width="320" height="215" src="https://www.youtube.com/embed/fywfgonj_5M"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <h1 class="font-semibold mt-3 text-center">
+              Amani - Eve Nyapacho
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardyo mt-40">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="cardyo-inner">
+          <div>
+            <iframe width="320" height="215" src="https://www.youtube.com/embed/A8puBFAY2GA"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <h1 class="font-semibold mt-3 text-center">
+              Help Solve Hunger Today
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardyo mt-40">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="cardyo-inner">
+          <div>
+            <iframe width="320" height="215" src="https://www.youtube.com/embed/qlI0f0BgLYo"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <h1 class="font-semibold mt-3 text-center">
+              Working Together to End Hunger in Soweto, Kayole
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardyo mt-40">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="cardyo-inner">
+          <div>
+            <iframe width="320" height="215" src="https://www.youtube.com/embed/fN_2GMA4euI"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <h1 class="font-semibold mt-3 text-center">
+              Mrembo Wa Mitaa Ya Eastlands Amtembelea Conjestina, Yala
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardyo mt-40">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="cardyo-inner">
+          <div>
+            <iframe width="320" height="215" src="https://www.youtube.com/embed/_2QKsNRYkeg"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <h1 class="font-semibold mt-3 text-center">
+              Power Breakfast: Saving Conjestina Achieng
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ________________________________Secion 11_______________________________ -->
+
+  <div>
+    <div class="">
+      <h1 class="text-3xl font-semibold mt-20 text-center">
+        SHOP MISS EASTLANDSMILE <br /><span class="text-center font-extrabold text-yellow-600">__________</span>
+      </h1>
+    </div>
+
+    <div class="flex justify-center items-center p-10 flex-wrap-reverse lg:flex-nowrap">
+      <div>
+        <p class="text-lg text-gray-500">
+          This Year Merchandise is not to Miss! Click Below to Shop and as
+          Always Merchandise will be available to purchase an Event
+        </p>
+        <button class="button mt-3">
+          <span class="span-mother">
+            <span>S</span>
+            <span>H</span>
+            <span>O</span>
+            <span>P</span>
+            <span></span>
+            <span>N</span>
+            <span>O</span>
+            <span>W</span>
+          </span>
+          <span class="span-mother2">
+            <span>S</span>
+            <span>H</span>
+            <span>O</span>
+            <span>P</span>
+            <span></span>
+            <span>N</span>
+            <span>O</span>
+            <span>W</span>
+          </span>
+        </button>
+      </div>
+
+      <div class="flex justify-around items-center p-10 gap-3 mt-20">
+        <div class="shadow-2xl text-center transition ease-in-out delay-150">
+          <img src="./images/shop2.png" height="70% " alt="" />
+          <h1 class="text-sm font-medium lg:text-lg lg:font-semibold">
+            MISS EASTLANDS FOOD PANTRY LOGO HOODIE
+          </h1>
+          <h1 class="text-lg font-semibold text-yellow-600">KSh25.00</h1>
+        </div>
+        <div class="shadow-2xl text-center transition ease-in-out delay-150">
+          <img src="./images/shop1.png" height="70% " alt="" />
+          <h1 class="text-sm font-medium lg:text-xl lg:font-semibold text-center">
+            MISS EASTLANDS FOOD PANTRY LOGO HOODIE
+          </h1>
+          <h1 class="text-lg font-semibold text-yellow-600">KSh25.00</h1>
+        </div>
+        <div class="shadow-2xl text-center transition ease-in-out delay-150">
+          <img src="./images/shop3.png" height="70% " alt="" />
+          <h1 class="text-sm font-medium lg:text-lg lg:font-semibold text-center">
+            MISS EASTLANDS FOOD PANTRY LOGO HOODIE
+          </h1>
+          <h1 class="text-lg font-semibold text-yellow-600">KSh25.00</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- _______________________________________Section 12_____________________________ -->
+
+  <div class="bg-purple-700">
+    <ul class="list-none flex items-center p-4 justify-around">
+      <li class="h-6 text-white text-2xl"><i class="fa fa-crown"></i></li>
+      <li class="text-sm ml-4 lg:ml-0 text-white">
+        The Search Is On For FACE OF EASTLANDS 2022. Just Complete A Short
+        Form To Get Started.
+      </li>
+      <li>
+        <button class="bg-black hidden lg:block py-3 px-4 text-white">
+          ENTER COMPETITION
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ___________________________________Fotter _______________________________ -->
+
+  <div class=" bg-black text-white flex flex-wrap justify-around py-20">
+
+    <div style="width: 33%; background-color: #3d3d3d4c; border: 1px solid white;" class="py-5 px-3">
+      <img src="./images/logo.png" width="300px" alt="" />
+      <p class="lg:text-lg md:text-lg text-sm text-gray-600 mt-5">
+        Our work is about inspiring and engaging others to make a change in
+        the community at local level. It’s a collaboration between us,
+        social entrepreneurs-corporates,individuals, and civil society
+        organisations.
+      </p>
+    </div>
+
+    <div>
+      <h1 class="text-xl text-yellow-700">QUICK LINKS</h1>
+      <ul>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Competition
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Shop Miss EastlandSmile
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Interviews
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          News & Announcements
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Volunteer
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Sponsorship
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Resource Portal
+        </li>
+      </ul>
+    </div>
+
+
+
+
+    <div>
+      <h1 class="text-xl text-yellow-700">FACE OF EASTLANDS</h1>
+      <ul>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Competition
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Shop Miss EastlandSmile
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Interviews
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          News & Announcements
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Volunteer
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Sponsorship
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Resource Portal
+        </li>
+      </ul>
+    </div>
+
+
+
+    <div>
+      <h1 class="text-xl text-yellow-700">CONTACT US</h1>
+      <ul>
+        <li>
+          <i class="fa-sharp fa-solid fa-location-dot leading-loose p-1" style="color: #bc8a00;"></i>The
+          Competition
+        </li>
+        <li>
+          <i class="fa-sharp fa-solid fa-envelope leading-loose p-1" style="color: #bc8a00;"></i>The
+          Shop Miss EastlandSmile
+        </li>
+        <li>
+          <i class="fa-sharp fa-solid fa-phone leading-loose p-1" style="color: #bc8a00;"></i> The
+          Interviews
+        </li>
+
+
+      </ul>
+
+    </div>
+
+
+
+  </div>
+
+  <div class="h-14 bg-black py-3">
+    <hr />
+    <div class="flex justify-around text-white ">
+      <div>
+        <h1 class="lg:text-lg md:text-lg text-sm">© Copyright 2023 Miss Eastlands. All Rights Reserved. Designed by Rick
+          <br /> +254727881462</h1>
+      </div>
+      <div>
+        <ul class="flex gap-5 lg:text-lg md:text-lg text-sm">
+          <li>Leadership & Staff</li>
+          <li>Our History</li>
+          <li>Blog</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ______________Loading _________________ -->
+
+  <script type="module" src="/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+</body>
+
+</html>

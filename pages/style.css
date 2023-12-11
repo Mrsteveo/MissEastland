@@ -1,0 +1,178 @@
+ /* _______________________3d Card ______________________ */
+ .cardha {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .contentha {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    /* color: #e8e8e8; */
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .contentha .heading {
+    font-weight: 800;
+    font-size: 24px;
+  }
+
+  .contentha .para {
+    line-height: 1.5;
+  }
+
+  .contentha .btn {
+    color: #e8e8e8;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .cardha::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+    z-index: -1;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .cardha:hover::before {
+    height: 100%;
+  }
+
+  .cardha:hover {
+    box-shadow: none;
+  }
+
+  .cardha:hover .btn {
+    color: #212121;
+    background: #e8e8e8;
+  }
+
+  .contentha .btn:hover {
+    outline: 2px solid #e8e8e8;
+    background: transparent;
+    color: #e8e8e8;
+  }
+
+  .contentha .btn:active {
+    box-shadow: none;
+  }
+
+  .progress-bar {
+    height: 4px;
+    background-color: #e5e7eb;
+    position: relative;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background-color: #10b981;
+    position: absolute;
+    width: 0;
+    transition: width 0.3s ease;
+  }
+
+  .progress-bar-number {
+    position: absolute;
+    top: -20px;
+    font-size: 12px;
+    color: #4b5563;
+  }
+
+  .progress-bar-number:first-child {
+    left: 0;
+  }
+
+  .progress-bar-number:last-child {
+    right: 0;
+  }
+
+  /* _______________________TAble _______________ */
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+ 
+  /* ___________________________button ____________________________ */
+
+  .button {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+  }
+
+  .button:hover::before {
+    transform: scaleX(1);
+  }
+
+  .button-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgb(218, 252, 30) 10.8%,
+      rgb(248, 182, 16) 94.3%
+    );
+    transition: all 0.475s;
+  }
+
+  /* Custom styles */
+  
+
+  .accordion-content {
+    display: none;
+  }
+
+  .accordion-item.active .accordion-content {
+    display: block;}

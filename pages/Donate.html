@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ___________FontAwesome icon Link _____________________ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css    "
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="path/to/aos.css" />
+<link rel="stylesheet" href="./style.css">
+    <title>Miss Eastlands</title>
+
+    
+  </head>
+  <body>
+    <!-- __________________--Header Portion --_______________________ -->
+
+    <div
+      class="text-white bg-yellow-600 flex-wrap flex justify-around items-center"
+    >
+      <div class="flex justify-around items-center">
+        <div class="flex justify-around items-center gap-5">
+          <i class="fa-sharp fa-solid fa-location-dot"></i>
+          <p>Quarry Drive, Donholm Nairobi Kenya</p>
+          |
+        </div>
+        <div class="flex justify-around items-center gap-3">
+          <i class="fa-solid fa-phone fa-fade"></i>
+          <p class="sm">+254 776 826 051</p>
+        </div>
+      </div>
+      <div class="flex justify-around gap-4 items-center">
+        <div class="flex justify-around items-center gap-3">
+          <i class="fa-solid fa-message"></i>
+          <p>contact@misseastlands.org</p>
+        </div>
+        <div class="flex justify-around items-center gap-8">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin"></i>
+        </div>
+      </div>
+    </div>
+
+    <nav class="bg-black shadow-md" x-data="{navbarOpen:false}">
+      <!-- container -->
+      <div class="flex flex-wrap justify-around px-4 py-4 mx-auto lg:space-x-4">
+        <!-- brand -->
+        <a
+          href="#"
+          class="inline-flex p-2 text-xl font-bold tracking-widere w-48"
+          ><img src="../images/logo.png" alt=""
+        /></a>
+        <!-- brand -->
+        <!-- toggler btn -->
+        <button
+          class="inline-flex items-center justify-center w-10 h-10 ml-auto text-white border rounded-md outline-none lg:hidden focus:outline-none"
+          @click="navbarOpen = !navbarOpen"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+        <!-- toggler btn -->
+        <!-- menu -->
+        <div
+          class="w-full mt-2 lg:inline-flex lg:w-auto lg:mt-0"
+          :class="{'hidden':!navbarOpen,'flex':navbarOpen}"
+        >
+          <ul
+            class="flex flex-col w-full space-y-2 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-2"
+          >
+            <li>
+              <a
+                href="./Corporate_Parthner.html"
+                class="flex px-4 py-2 font-medium text-white rounded-md hover:bg-gray-600"
+                >Corporate Partners</a
+              >
+            </li>
+            <!-- dropdown -->
+            <li class="relative" x-data="{dropdownOpen:false}">
+              <button
+                href="#"
+                class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-gray-600"
+                @click="dropdownOpen = !dropdownOpen"
+              >
+                Programs <i class="fas fa-angle-down ml-2 mt-1"></i>
+              </button>
+              <!-- dropdown menu -->
+              <div
+                class="right-0 z-50 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+                :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}"
+                @click.away="dropdownOpen = false"
+              >
+                <ul class="space-y-2 lg:w-48">
+                  <li>
+                    <a
+                      href="./MissEastlandSmile.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >MISS EASTLANDSMILE</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./MissEastLandFood.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >MISS EASTLANDS FOOD PANTRY</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./Misseastlandscup.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >MISSEASLANDS CUP</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./Silc.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >SILC</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- dropdown menu -->
+            </li>
+            <!-- dropdown -->
+            <li class="relative" x-data="{dropdownOpen:false}">
+              <button
+                href="#"
+                class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-gray-600"
+                @click="dropdownOpen = !dropdownOpen"
+              >
+                Face of Eastlands <i class="fas fa-angle-down ml-2 mt-1"></i>
+              </button>
+              <!-- dropdown menu -->
+              <div
+                class="right-0 z-50 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+                :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}"
+                @click.away="dropdownOpen = false"
+              >
+                <ul class="space-y-2 lg:w-48">
+                  <li>
+                    <a
+                      href="./Prize.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >PRIZES</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./About.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >ABOUT</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./Pagent.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >PAGEANT</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./Bodybuilding.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >BODY BUILDING</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./MissEastLands.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >MR EASTLANDS</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- dropdown menu -->
+            </li>
+            <!-- dropdown -->
+            <li class="relative" x-data="{dropdownOpen:false}">
+              <button
+                href="#"
+                class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-gray-600"
+                @click="dropdownOpen = !dropdownOpen"
+              >
+                Miss Eastlandsmile <i class="fas fa-angle-down ml-2 mt-1"></i>
+              </button>
+              <!-- dropdown menu -->
+              <div
+                class="right-0 z-50 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+                :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}"
+                @click.away="dropdownOpen = false"
+              >
+                <ul class="space-y-2 lg:w-48">
+                
+                  
+                  <li>
+                    <a
+                      href="./Shop.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >SHOP</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- dropdown menu -->
+            </li>
+            <!-- dropdown -->
+            <li class="relative" x-data="{dropdownOpen:false}">
+              <button
+                href="#"
+                class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-gray-600"
+                @click="dropdownOpen = !dropdownOpen"
+              >
+                About Us <i class="fas fa-angle-down ml-2 mt-1"></i>
+              </button>
+              <!-- dropdown menu -->
+              <div
+                class="right-0 z-50 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+                :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}"
+                @click.away="dropdownOpen = false"
+              >
+                <ul class="space-y-2 lg:w-48">
+                  <li>
+                    <a
+                      href="./Whoweare.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >WHO WE ARE</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./Whatwedo.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >WHAT WE DO</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./OurInitiative.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >OUR INITIATIVE </a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./CoreValues.html"
+                      class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                      >CORE VALUES </a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- dropdown menu -->
+            </li>
+            <!-- dropdown -->
+  
+            <a href="./Donate.html">  <button
+              class=" px-4 h-10 rounded-md w-24 text-white font-semibold bg-yellow-600 hover:bg-gray-500 hover:text-black" 
+            >
+              Donate
+            </button></a>
+          </ul>
+        </div>
+        <!-- menu -->
+      </div>
+      <!-- container -->
+    </nav>
+
+    <!-- _______________________Hero Section _____________________________________ -->
+
+    <div class="">
+      <div
+        class=""
+        style="
+          background-image: url(../images/young-.jpeg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          border-bottom-left-radius: 90px;
+          border-bottom-right-radius: 90px;
+        "
+      >
+        <div
+          class="h-72 b rounded-b-3xl flex justify-center items-center flex-col leading-loose"
+         
+        >
+          <h1
+            class="lg:text-4xl text-2xl font-bold text-yellow-600 text-center"
+          >
+            Donate
+          </h1>
+          <p
+            class="lg:text-2xl text-xl w-4/5 text-white font-semibold text-center pt-2"
+          >
+            WE NEED YOUR SUPPORT TO HELP YOUNG AND VULNERABLE LACTATING MOTHERS
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ___________________________Step by Step form _______________________________ -->
+
+    <div class="container mt-20 mx-auto p-4">
+      <div class="flex justify-center">
+        <div class="w-4/5 bg-gray-300 py-8 px-8">
+          <!-- Progress Bar -->
+          <div class="progress-bar relative bg-red-800 z-10">
+            <div id="progressBarFill" class="progress-bar-fill z-0"></div>
+            <div
+              class="progress-bar-number sm:96 bg-yellow-300 h-8 w-8 rounded-full shadow-xl flex justify-center mt-1 items-center"
+              style="margin-left: 450px"
+            >
+              2
+            </div>
+            <div
+              class="progress-bar-number bg-yellow-300 h-8 w-8 rounded-full shadow-xl flex justify-center mt-1 items-center"
+            >
+              1
+            </div>
+            <div
+              class="progress-bar-number bg-yellow-300 h-8 w-8 rounded-full shadow-xl flex justify-center mt-1 items-center"
+            >
+              3
+            </div>
+          </div>
+
+          <!-- Stepper -->
+
+          <!-- Content -->
+          <div id="stepperContent" class="p-4 bg-gray-00 rounded-lg shadow-2xl">
+            <h2 class="text-xl mb-2" id="stepTitle">Step 1</h2>
+
+            <div id="stepContent">
+              <!-- Step 1 -->
+              <div id="step1" class="hidden">
+                <div id="currencyField" class="mt-2 text-center py-9">
+                  <label
+                    ><input type="radio" name="currency" value="KES" /> Kenyan
+                    shilling</label
+                  >
+                  <label
+                    ><input type="radio" name="currency" value="USD" /> United
+                    States (US) dollar</label
+                  >
+                  <label
+                    ><input type="radio" name="currency" value="GBP" /> Pound
+                    sterling</label
+                  >
+                </div>
+                <h2 class="mb-4 text-center text-2xl font-bold text-red-900">
+                  Donation
+                </h2>
+
+                <input
+                  type="number"
+                  id="amountField"
+                  class="mt-2 border border-gray-400 rounded p-2 w-full"
+                />
+              </div>
+
+              <!-- Step 2 -->
+              <div id="step2" class="hidden">
+                <h1 class="mb-4 text-center text-2xl font-bold text-red-900">
+                  Donation Details
+                </h1>
+                <label for="phoneField" class="mb-2">Phone *</label>
+                <input
+                  type="tel"
+                  id="phoneField"
+                  class="mt-2 border border-gray-400 rounded p-2 w-full"
+                  required
+                />
+                <label for="firstNameField" class="mb-2 mt-4"
+                  >First Name (optional)</label
+                >
+                <input
+                  type="text"
+                  id="firstNameField"
+                  class="mt-2 border border-gray-400 rounded p-2 w-full"
+                />
+                <label for="lastNameField" class="mb-2 mt-4"
+                  >Last Name (optional)</label
+                >
+                <input
+                  type="text"
+                  id="lastNameField"
+                  class="mt-2 border border-gray-400 rounded p-2 w-full"
+                />
+                <label for="companyNameField" class="mb-2 mt-4"
+                  >Company Name (optional)</label
+                >
+                <input
+                  type="text"
+                  id="companyNameField"
+                  class="mt-2 border border-gray-400 rounded p-2 w-full"
+                />
+                <label for="streetField" class="mb-2 mt-4"
+                  >House Number and Street Name (optional)</label
+                >
+                <input
+                  type="text"
+                  id="streetField"
+                  class="mt-2 border border-gray-400 rounded p-2 w-full"
+                />
+                <label for="suiteField" class="mb-2 mt-4"
+                  >Appartment, Suite, unit, etc. (optional)</label
+                >
+                <input
+                  type="text"
+                  id="suiteField"
+                  class="mt-2 border border-gray-400 rounded p-2 w-full"
+                />
+                <label for="cityField" class="mb-2 mt-4"
+                  >Town / City (optional)</label
+                >
+                <input
+                  type="text"
+                  id="cityField"
+                  class="mt-2 border border-gray-400 rounded p-2 w-full"
+                />
+                <label for="zipcodeField" class="mb-2 mt-4"
+                  >Post Code / Zip (optional)</label
+                >
+                <input
+                  type="text"
+                  id="zipcodeField"
+                  class="mt-2 border border-gray-400 rounded p-2 w-full"
+                />
+                <label for="countryField" class="mb-2 mt-4"
+                  >Select Your Country (optional)</label
+                >
+                <select
+                  id="countryField"
+                  class="mt-2 border border-gray-400 rounded p-2 w-full"
+                >
+                  <option value="US">US</option>
+                </select>
+              </div>
+
+              <!-- Step 3 -->
+              <div id="step3" class="hidden">
+                <h2 class="mb-4 text-center text-2xl font-bold text-red-900">
+                  Your Donation
+                </h2>
+                <div class="flex justify-center gap-7">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Donate</th>
+                        <th>Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Donate</td>
+                        <td>$500</td>
+                      </tr>
+                      <tr>
+                        <td>Donate</td>
+                        <td>$500</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <label for="donationAmountField" class="mt-4"
+                  >Donation Amount</label
+                >
+                <input
+                  type="text"
+                  id="donationAmountField"
+                  class="mt-2 border border-gray-400 rounded p-2 w-full"
+                  value="£500.00"
+                />
+                <label for="paymentMethodField" class="mt-4"
+                  >Place order and pay using</label
+                >
+                <div
+                  id="paymentMethodField"
+                  class="mt-2 border border-gray-400 rounded p-2 w-full"
+                >
+                  <label
+                    ><input type="radio" name="paymentMethod" value="iPay" />
+                    iPay</label
+                  >
+                </div>
+
+                <p class="mt-4">
+                  Your personal data will be used to process your order, support
+                  your experience throughout this website, and for other
+                  purposes described in our
+                  <span class="font-bold"> privacy policy</span>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-between mt-7">
+            <button
+              class="py-2 px-4 shadow-2xl bg-yellow-600 text-white rounded-md"
+              onclick="prevStep()"
+              id="prevButton"
+            >
+              Previous
+            </button>
+            <button
+              class="py-2 bg-red-800 text-white px-4 shadow-2xl rounded-md"
+              onclick="nextStep()"
+              id="nextButton"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ____________________Section 4__________________________________ -->
+
+    <div class="flex flex-wrap justify-center items-center gap-11">
+      <div class="shadow-xl p-12 w-96 lg:w-5/12">
+        <h1 class="text-2xl font-semibold leading-7">
+          HELP US ERADICATE RAMPANT DUMPING OF BABIES
+        </h1>
+        <p>
+          Youth and young mothers at risk of not being empowered are
+          particularly vulnerable to losing social and economic capacities of
+          their families and communities that provide for their protection and
+          provision. With your support, we can help more vulnerable youth and at
+          most risk young mothers expand economic opportunities for self-
+          sufficiency and resilience, and create suitable living environment.
+          This way we help eradicate the dumping newborns.
+        </p>
+      </div>
+      <div class="shadow-xl p-12 w-96 lg:w-5/12">
+        <h1 class="text-2xl font-semibold leading-loose">
+          TARGET $200,000-----RAISED 5%
+        </h1>
+        <p>
+          To donate to Miss Eastlands Organization, please use the following
+          account number: 1296126978. You can deposit funds through KCB Paybill
+          522522 or use the following information to donate internationally:
+          ACCOUNT NAME: MISS EASTLANDS ORGANIZATION ACCOUNT NUMBER: 1296126978
+          BRANCH NAME: SHUJAA MALL BRANCH CODE: 01-324 SWIFT: KCBLKENX01324
+        </p>
+      </div>
+    </div>
+
+    <!-- _______________________    Section 5 ________________ -->
+
+    <div class="flex justify-center mt-24 items-center gap-11">
+      <div class="w-5/12">
+        <h1 class="text-xl font-bold text-yellow-600">
+          FOR AS LITTLE AS $1 A DAY <br />
+          <span class="text-center font-extrabold text-yellow-600"
+            >__________</span
+          >
+        </h1>
+      </div>
+
+      <div class="w-5/12 leading-loose">
+        <p>
+          o Help vulnerable youth and young at most risk lactating mothers
+          become self-sufficient and empowered.
+        </p>
+        <p>o Help reduce the isolation of income groups</p>
+        <p>o Help community sustainability.</p>
+      </div>
+    </div>
+
+    <!-- ____________________________Section 6___________________________________________ -->
+
+    <div class="flex flex-wrap justify-around mt-14">
+      <div class="lg:h-[500px] lg:w-5/12">
+        <div class="relative">
+          <div class="bg-gray-700 shadow-2xl rounded-full">
+            <img
+              src="../images/FunzaPlace2.jpeg"
+              style="height: 400px; width: 500px; border-radius: 20px"
+              alt=""
+            />
+          </div>
+          <div
+            class="bg-white ml-28 hidden md:hidden lg:block lg:-mt-16 absolute p-1 rounded-2xl"
+          >
+            <img
+              src="../images/what-we-do.jpeg"
+              style="height: 400px; width: 500px; border-radius: 20px"
+              alt=""
+            />
+          </div>
+          <div
+            class="bg-white hidden md:hidden lg:block sm:h-40 sm:w-52 sm:-mt-28 lg:h-60 absolute ml-96 lg:-mt-60 rounded-md shadow-xl text-center lg:w-60"
+          >
+            <h1
+              class="lg:text-2xl text-center lg:my-20 text-lg font-bold text-gray-600"
+            >
+              OUR GOALS <br />
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="lg:h-96 lg:w-96 p-14 lg:p-0 lg:mt-10">
+        <div class="flex flex-col">
+          <h1 class="font-bold text-xl lg:mt-11 leading-loose">
+            A SUITABLE LIVING ENVIRONMENT – which includes:
+          </h1>
+          <p class="text-base text-gray-600">
+            o Improving the safety and livability of neighbourhoods <br />
+
+            o Reducing the isolation of income groups within the neighborhoods
+            through job creation and retention for youth, and the revitalization
+            of dead businesses due to COVID-19 pandemic.
+          </p>
+          <h1 class="font-bold text-xl lg:mt-11 leading-loose">
+            EXPANDED ECONOMIC OPPORTUNITIES- which includes:
+          </h1>
+          <p class="text-base text-gray-600">
+            o Job creation and retention;<br />
+            o Establishment, stabilization and expansion of small businesses
+            (including micro-businesses);. <br />
+            o The provision of jobs to vulnerable youth living in slums and
+            informal settlements. <br />
+            o Access to capital and credit for development activities that
+            promote the long-term economic and social viability of the
+            community; <br />
+            o Empowerment and self-sufficiency for vulnerable youth to reduce
+            generational poverty. o Empowerment and self-sufficiency for
+            vulnerable youth to reduce generational poverty.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ________________________________Section 7_________________________________ -->
+
+    <div class="p-36">
+      <h1 class="text-xl lg:mt-96 font-bold text-center text-yellow-600">
+        FOR AS LITTLE AS $1 A DAY <br />
+        <span class="text-center font-extrabold text-yellow-600"
+          >__________</span
+        >
+      </h1>
+
+      <h2 class="text-lg font-semibold">
+        Become part of Lifeline, a recurring giving program that helps
+        vulnerable youth — especially young at most risk lactating mothers — get
+        the training they need to start savings-led microfinance groups.
+      </h2>
+      <p class="text-lg text-gray-600">
+        Youth in urban poor communities have little to no access to formal
+        credit or savings services. Without these services, they are held back
+        from growing businesses and saving money. But you can be their
+        Lifeline—and help them get the training they need to start savings
+        groups. It’s such a simple solution—and makes such a big social and
+        economic impact. Live your faith in an extraordinary way—become a
+        Lifeline member today. Our microfinance programs target 2,000 youth
+        yearly.
+      </p>
+
+      <h3 class="text-lg font-semibold mt-12">
+        When you join Lifeline, you will…
+      </h3>
+      <p class="text-lg text-gray-600">
+        o Uplift young at most risk lactating mothers’ families and
+        communities<br />
+        o Live your faith in an extraordinary way<br />
+        o Keep Miss Eastlands Organization running effectively and
+        efficiently<br />
+      </p>
+
+      <h4 class="text-lg font-semibold">How can you help?</h4>
+      <p class="text-lg text-gray-600">
+        You can support our vulnerable youth by either providing a direct
+        donation to the organization or through purchasing our products online,
+        such as branded T-Shirts that will be won by you to honor our youth.
+      </p>
+    </div>
+
+    <!-- ____________________________________Section 8____________________________________ -->
+
+    <div class="flex" style="height: 90vh">
+      <div class="bg-red-600 hidden lg:block">
+        <img
+          src="../images/sadasdas.jpeg"
+          alt=""
+          style="height: 90vh; width: 50vw"
+        />
+      </div>
+      <div class="bg-red-900 lg:w-9/12 flex flex-col justify-center pl-9">
+        <div class="">
+          <h1 class="text-6xl opacity-20 font-bold text-white leading-none">
+            GIFT
+          </h1>
+          <h2 class="text-2xl font-semibold text-white">
+            YOUR GIFT IS SAFE AND SECURE
+          </h2>
+          <p class="lg:w-9/12 mt-7 text-white">
+            Contributions will be used for the purpose(s), if any, specified by
+            the donor. However, if in the judgment of Miss Eastlands
+            Organization, such purpose(s) become unnecessary, undesirable,
+            impractical or impossible to fill, Miss Eastlands Organization may
+            use such contributions for its general purposes
+          </p>
+          <button
+            class="text-white font-semibold text-lg mt-4 pt-3 pb-3 pl-6 pr-6 rounded-full border-2 leading-loose"
+          >
+            Donate By Phone Or Mail
+            <i class="fa fa-arrow-alt-circle-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ____________________Section 9_________________________ -->
+
+    <div class="p-36">
+      <h1 class="text-xl lg:mt- font-bold text-center text-yellow-600">
+        MAKE A ONE- TIME OR MONTHLY DONATION <br />
+        <span class="text-center font-extrabold text-yellow-600"
+          >__________</span
+        >
+      </h1>
+
+      <h2 class="text-lg">
+        Will You Help Our Vulnerable Youth & at Most Risk Lactating Mothers?
+        MAKE A ONE- TIME OR MONTHLY DONATION BUY A CUSTOM BRAND FOR THE YOUNG AT
+        MOST RISK LACTATING MOTHERS
+      </h2>
+      <h1 class="text-lg font-semibold">Become Part of a Lifeline!</h1>
+      <p class="text-lg text-gray-600">
+        The first 1,000 donors to commit to a monthly donation of $50+ will
+        receive a FREE T-Shirt or Hoodie or Cap! Our vulnerable youth and at
+        most risk lactating mothers sponsors and partners are helping us change
+        their lives by making a recurring donation of just $50 per month to help
+        us empower these youth and to reduce generational poverty, the isolation
+        of income groups through job creation and retention, and revitalize dead
+        businesses due to Covid-19!
+      </p>
+
+      <h1 class="text-xl lg:mt- font-bold text-center text-yellow-600">
+        MORE THAN DONATIONS <br />
+        <span class="text-center font-extrabold text-yellow-600"
+          >__________</span
+        >
+      </h1>
+
+      <h4 class="text-lg font-semibold">There Are Other Ways You Can Give</h4>
+      <p class="text-lg text-gray-600">
+        If you are interested in giving to Miss Eastlands Organization there are
+        numerous ways you can get involved – and it’s not just about donations!
+      </p>
+    </div>
+
+    <!-- ______________________________Section10____________________ -->
+
+    <div>
+      <h1 class="text-2xl font-bold text-yellow-600 pb-9 text-center mt-12">
+        THE APPROACH TO ACHIEVE OUR GOALS <br />
+        <span class="text-center font-extrabold text-yellow-600"
+          >__________</span
+        >
+      </h1>
+
+      <div class="flex justify-around mx-auto mt-30 flex-wrap gap-6">
+        <div class="cardha">
+          <div class="contentha">
+            <div>
+              <h1 class="text-center"></h1>
+              <p class="heading text-center">DONATE YOUR TIME AND TALENT</p>
+              <p class="para text-center">
+                Your time and skill are invaluable – particularly if you are
+                involved in the social entrepreneurship. We need all sorts of
+                volunteers but trainings and education for savings and internal
+                lending communities and areas where you can save us money are
+                all particularly appreciated.
+              </p>
+              <button class="button mx-12 mt-4">
+                <span class="button-content">Volunteer Info </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="cardha">
+          <div class="contentha">
+            <div>
+              <h1 class="text-center"></h1>
+              <p class="heading text-center">PROGRAMME SPONSORSHIP</p>
+              <p class="para text-center">
+                If you are part of a local business that is looking for
+                charitable cause to support, what better cause than empowering
+                vulnerable youth? For information on business sponsorship get in
+                touch today!
+              </p>
+              <button class="button mx-12 mt-4">
+                <span class="button-content">Sign Up </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="cardha">
+          <div class="contentha">
+            <div>
+              <h1 class="text-center"></h1>
+              <p class="heading text-center">HOST A COMMUNITY EVENT</p>
+              <p class="para text-center">
+                Charitable events are a wonderful way to raise funds and spread
+                essential awareness of this steadfast cause. Hosting a community
+                event in honor of vulnerable lactating mothers will be doing
+                your part to ensure the success of our charity.
+              </p>
+              <button class="button mx-12 mt-4">
+                <span class="button-content">Sign Up </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="cardha">
+          <div class="contentha">
+            <div>
+              <h1 class="text-center"></h1>
+              <p class="heading text-center">DONATE A VEHICLE</p>
+              <p class="para text-center">
+                If you are in the fortunate position where you can afford to
+                donate a vehicle to support Miss Eastlands Organization’s
+                charitable causes, we thank you! Please contact us today to
+                learn about how your donations can help us end vulnerable youth
+                and at most risk lactating mothers’ struggles.
+              </p>
+              <button class="button mx-12 mt-4">
+                <span class="button-content">Learn More </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- _______________________________________Section 12_____________________________ -->
+
+    <div class="bg-purple-700 mt-12">
+      <ul class="list-none flex items-center p-4 justify-around">
+        <li class="h-6 text-white text-2xl"><i class="fa fa-crown"></i></li>
+        <li class="text-sm ml-4 lg:ml-0 text-white">
+          The Search Is On For FACE OF EASTLANDS 2022. Just Complete A Short
+          Form To Get Started.
+        </li>
+        <li>
+          <button class="bg-black hidden lg:block py-3 px-4 text-white">
+            ENTER COMPETITION
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ___________________________________Fotter _______________________________ -->
+
+    <div class="bg-black text-white flex flex-wrap justify-around py-20">
+      <div
+        style="width: 33%; background-color: #3d3d3d4c; border: 1px solid white"
+        class="py-5 px-3"
+      >
+        <img src="../images/logo.png" width="300px" alt="" />
+        <p class="lg:text-lg md:text-lg text-sm text-gray-600 mt-5">
+          Our work is about inspiring and engaging others to make a change in
+          the community at local level. It’s a collaboration between us, social
+          entrepreneurs-corporates,individuals, and civil society organisations.
+        </p>
+      </div>
+
+      <div>
+        <h1 class="text-xl text-yellow-700">QUICK LINKS</h1>
+        <ul>
+          <li><i class="fa fa-long-arrow-right"></i> The Competition</li>
+          <li>
+            <i class="fa fa-long-arrow-right"></i> The Shop Miss EastlandSmile
+          </li>
+          <li><i class="fa fa-long-arrow-right"></i> The Interviews</li>
+          <li>
+            <i class="fa fa-long-arrow-right"></i> The News & Announcements
+          </li>
+          <li><i class="fa fa-long-arrow-right"></i> The Volunteer</li>
+          <li><i class="fa fa-long-arrow-right"></i> The Sponsorship</li>
+          <li><i class="fa fa-long-arrow-right"></i> The Resource Portal</li>
+        </ul>
+      </div>
+
+      <div>
+        <h1 class="text-xl text-yellow-700">FACE OF EASTLANDS</h1>
+        <ul>
+          <li><i class="fa fa-long-arrow-right"></i> The Competition</li>
+          <li>
+            <i class="fa fa-long-arrow-right"></i> The Shop Miss EastlandSmile
+          </li>
+          <li><i class="fa fa-long-arrow-right"></i> The Interviews</li>
+          <li>
+            <i class="fa fa-long-arrow-right"></i> The News & Announcements
+          </li>
+          <li><i class="fa fa-long-arrow-right"></i> The Volunteer</li>
+          <li><i class="fa fa-long-arrow-right"></i> The Sponsorship</li>
+          <li><i class="fa fa-long-arrow-right"></i> The Resource Portal</li>
+        </ul>
+      </div>
+
+      <div>
+        <h1 class="text-xl text-yellow-700">CONTACT US</h1>
+        <ul>
+          <li>
+            <i
+              class="fa-sharp fa-solid fa-location-dot leading-loose p-1"
+              style="color: #bc8a00"
+            ></i
+            >The Competition
+          </li>
+          <li>
+            <i
+              class="fa-sharp fa-solid fa-envelope leading-loose p-1"
+              style="color: #bc8a00"
+            ></i
+            >The Shop Miss EastlandSmile
+          </li>
+          <li>
+            <i
+              class="fa-sharp fa-solid fa-phone leading-loose p-1"
+              style="color: #bc8a00"
+            ></i>
+            The Interviews
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="h-16 bg-black py-3">
+      <hr />
+      <div class="flex justify-around text-white">
+        <div>
+          <h1 class="lg:text-lg md:text-lg text-sm">
+            © Copyright 2023 Miss Eastlands. All Rights Reserved. Designed by
+            Rick <br />
+            +254727881462
+          </h1>
+        </div>
+        <div>
+          <ul class="flex gap-5 lg:text-lg md:text-lg text-sm">
+            <li>Leadership & Staff</li>
+            <li>Our History</li>
+            <li>Blog</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- ------------------------------------End ______________________________--------------------- -->
+
+    <script>
+      const steps = [
+        {
+          title: "First",
+          content: "step1",
+        },
+        {
+          title: "Second",
+          content: "step2",
+        },
+        {
+          title: "Last",
+          content: "step3",
+        },
+      ];
+
+      let currentStep = 0;
+      const prevButton = document.getElementById("prevButton");
+      const nextButton = document.getElementById("nextButton");
+      const stepTitle = document.getElementById("stepTitle");
+      const stepContent = document.getElementById("stepContent");
+      const progressBarFill = document.getElementById("progressBarFill");
+
+      function updateStep() {
+        stepTitle.textContent = steps[currentStep].title;
+        const contentId = steps[currentStep].content;
+        const contentDivs = document.querySelectorAll("#stepContent > div");
+        contentDivs.forEach((div) => {
+          if (div.id === contentId) {
+            div.classList.remove("hidden");
+          } else {
+            div.classList.add("hidden");
+          }
+        });
+
+        prevButton.disabled = currentStep === 0;
+        nextButton.disabled = currentStep === steps.length - 1;
+
+        // Calculate the width of the progress bar fill
+        const progressWidth = (currentStep / (steps.length - 1)) * 100;
+        progressBarFill.style.width = `${progressWidth}%`;
+      }
+
+      function prevStep() {
+        if (currentStep > 0) {
+          currentStep--;
+          updateStep();
+        }
+      }
+
+      function nextStep() {
+        if (currentStep < steps.length - 1) {
+          currentStep++;
+          updateStep();
+        }
+      }
+
+      updateStep();
+    </script>
+
+    <script type="module" src="/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1463 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ___________FontAwesome icon Link _____________________ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css    " />
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="path/to/aos.css" />
+  <link rel="stylesheet" href="./style.css">
+  <title>Miss Eastlands</title>
+
+
+</head>
+
+<body class="flex justify-center flex-col w-[100%]">
+  <!-- __________________--Header Portion --_______________________ -->
+
+  <div class="text-white bg-yellow-600 flex-wrap flex justify-around items-center">
+    <div class="flex justify-around items-center">
+      <div class="flex justify-around items-center gap-5">
+        <i class="fa-sharp fa-solid fa-location-dot"></i>
+        <p>Quarry Drive, Donholm Nairobi Kenya</p>
+        |
+      </div>
+      <div class="flex justify-around items-center gap-3">
+        <i class="fa-solid fa-phone fa-fade"></i>
+        <p class="sm">+254 776 826 051</p>
+      </div>
+    </div>
+    <div class="flex justify-around gap-4 items-center">
+      <div class="flex justify-around items-center gap-3">
+        <i class="fa-solid fa-message"></i>
+        <p>contact@misseastlands.org</p>
+      </div>
+      <div class="flex justify-around items-center gap-8">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+    </div>
+  </div>
+
+  <nav class="bg-black shadow-md" x-data="{navbarOpen:false}">
+    <!-- container -->
+    <div class="flex flex-wrap justify-around px-4 py-4 mx-auto lg:space-x-4">
+      <!-- brand -->
+      <a
+        href="#"
+        class="inline-flex p-2 text-xl font-bold tracking-widere w-48"
+        ><img src="../images/logo.png" alt=""
+      /></a>
+      <!-- brand -->
+      <!-- toggler btn -->
+      <button
+        class="inline-flex items-center justify-center w-10 h-10 ml-auto text-white border rounded-md outline-none lg:hidden focus:outline-none"
+        @click="navbarOpen = !navbarOpen"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+      <!-- toggler btn -->
+      <!-- menu -->
+      <div
+        class="w-full mt-2 lg:inline-flex lg:w-auto lg:mt-0"
+        :class="{'hidden':!navbarOpen,'flex':navbarOpen}"
+      >
+        <ul
+          class="flex flex-col w-full space-y-2 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-2"
+        >
+          <li>
+            <a
+              href="./Corporate_Parthner.html"
+              class="flex px-4 py-2 font-medium text-white rounded-md hover:bg-gray-600"
+              >Corporate Partners</a
+            >
+          </li>
+          <!-- dropdown -->
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button
+              href="#"
+              class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-gray-600"
+              @click="dropdownOpen = !dropdownOpen"
+            >
+              Programs <i class="fas fa-angle-down ml-2 mt-1"></i>
+            </button>
+            <!-- dropdown menu -->
+            <div
+              class="right-0 z-50 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+              :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}"
+              @click.away="dropdownOpen = false"
+            >
+              <ul class="space-y-2 lg:w-48">
+                <li>
+                  <a
+                    href="./MissEastlandSmile.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                    >MISS EASTLANDSMILE</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./MissEastLandFood.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                    >MISS EASTLANDS FOOD PANTRY</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./Misseastlandscup.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                    >MISSEASLANDS CUP</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./Silc.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                    >SILC</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- dropdown menu -->
+          </li>
+          <!-- dropdown -->
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button
+              href="#"
+              class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-gray-600"
+              @click="dropdownOpen = !dropdownOpen"
+            >
+              Face of Eastlands <i class="fas fa-angle-down ml-2 mt-1"></i>
+            </button>
+            <!-- dropdown menu -->
+            <div
+              class="right-0 z-50 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+              :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}"
+              @click.away="dropdownOpen = false"
+            >
+              <ul class="space-y-2 lg:w-48">
+                <li>
+                  <a
+                    href="./Prize.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                    >PRIZES</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./About.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                    >ABOUT</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./Pagent.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                    >PAGEANT</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./Bodybuilding.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                    >BODY BUILDING</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./MissEastLands.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                    >MR EASTLANDS</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- dropdown menu -->
+          </li>
+          <!-- dropdown -->
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button
+              href="#"
+              class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-gray-600"
+              @click="dropdownOpen = !dropdownOpen"
+            >
+              Miss Eastlandsmile <i class="fas fa-angle-down ml-2 mt-1"></i>
+            </button>
+            <!-- dropdown menu -->
+            <div
+              class="right-0 z-50 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+              :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}"
+              @click.away="dropdownOpen = false"
+            >
+              <ul class="space-y-2 lg:w-48">
+              
+                
+                <li>
+                  <a
+                    href="./Shop.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                    >SHOP</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- dropdown menu -->
+          </li>
+          <!-- dropdown -->
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button
+              href="#"
+              class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-gray-600"
+              @click="dropdownOpen = !dropdownOpen"
+            >
+              About Us <i class="fas fa-angle-down ml-2 mt-1"></i>
+            </button>
+            <!-- dropdown menu -->
+            <div
+              class="right-0 z-50 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+              :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}"
+              @click.away="dropdownOpen = false"
+            >
+              <ul class="space-y-2 lg:w-48">
+                <li>
+                  <a
+                    href="./Whoweare.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                    >WHO WE ARE</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./Whatwedo.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                    >WHAT WE DO</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./OurInitiative.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                    >OUR INITIATIVE </a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./CoreValues.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black"
+                    >CORE VALUES </a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- dropdown menu -->
+          </li>
+          <!-- dropdown -->
+
+          <a href="./Donate.html">  <button
+            class=" px-4 h-10 rounded-md w-24 text-white font-semibold bg-yellow-600 hover:bg-gray-500 hover:text-black" 
+          >
+            Donate
+          </button></a>
+        </ul>
+      </div>
+      <!-- menu -->
+    </div>
+    <!-- container -->
+  </nav>
+  <!-- _______________________Hero Section _____________________________________ -->
+
+  <div class="">
+    <div class="" style="
+            background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(../images/Preliminary3.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+           
+          ">
+      <div class="   flex justify-center items-center flex-col leading-loose">
+        <h1 class="lg:text-3xl mt-28 text-3xl font-bold text-white text-center">
+            PAGEANT REVOLUTION!
+        </h1>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
+          <path fill="#fff" fill-opacity="1"
+            d="M0,32L80,64C160,96,320,160,480,208C640,256,800,288,960,261.3C1120,235,1280,149,1360,106.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+          </path>
+        </svg>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <!--_______________________ Content Section Starts Here _____________________-->
+    <div id="content" class="flex justify-center items-center flex-col">
+        <p class="md:w-[64%] text-center text-2xl text-yellow-500 font-semibold pt-10 pb-5">
+            SUBSTANCE AND POWERFUL PLATFORM
+        </p>
+        <div class="border-[1px] w-24 my-6 rounded-full border-yellow-500"></div>
+        <p class="text-center text-slate-700 mb-20 w-[80%]">
+            After seven-year management of Miss Eastlands, we are celebrating 8 years in the pageant and modeling
+            industry. We’ve conducted in-depth research into the operations of five major pageants, paying particular
+            attention to the needs of modern contestants. We discovered that for over a century, pageants have been
+            running the same way: one king/queen gets all the attention and the other contestants are sent home, sad,
+            crying and confused, their chapters are closed when the event ends. While most of the world’s pageants are
+            continuing along a traditional path, today’s young contestants have changed. They are intelligent and
+            results-oriented, they demand substance, and they don’t buy artifice. Pageant give Models and Actors a
+            powerful platform to brand themselves, get noticed and use the pageant powerful marketing platform to excel
+            in their carrier.
+        </p>
+    </div>
+    <!--_______________________ Content Section Ends Here _____________________-->
+
+
+
+    <!--_______________________ Picture 1 Section Starts Here _____________________-->
+    <div class="flex justify-around mx-auto my-32 flex-wrap lg:w-full">
+        <div class="w-96 lg:w-1/2">
+            <img class="h-[100vh]" src="../images/FunzaPlace1.jpeg" alt="">
+        </div>
+        <div class="w-96 lg:w-1/2  bg-slate-200">
+            <div class="w-[90%] m-10">
+                <p class="lg:text-3xl text-2xl text-blue-900 font-medium">LEADERSHIP COACHING, DEVELOPMENT PROGRAM AND
+                    EMPOWERMENT</p>
+                <p class="text-slate-600 lg:text-lg my-3">Our pageant and modeling format that includes leadership
+                    coaching, development program and
+                    empowerment plan attracted the attention and support from powerful brands such as PAM NAIL LAQUE,
+                    BRANDME KENYA, JEFFERY WILSON SHOW, GREENSPAN MALL, DAVANA HOTEL and many more…</p>
+                <p class="text-slate-600 lg:text-lg my-3">Our pageant got honoured with endorsements and praises for our
+                    humanitarian work, contribution to
+                    young contestants as well as our impact on lives of vulnerable youth and young at most risk
+                    lactating mothers around Eastlands from dignitaries, prominent members of local and international
+                    communities, government officials, and many more.
+
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <!--_______________________ Picture 1 Section Ends Here ________________________-->
+
+
+    <!--_______________________ Beauty Section Starts Here _____________________-->
+    <div id="content" class="flex justify-center items-center flex-col">
+        <p class="md:w-[64%] text-center text-xl lg:text-2xl text-yellow-500 font-semibold pt-10">
+            MR & MISS EASTLANDS 2022
+        </p>
+        <p class="md:w-[64%] text-center text-lg lg:text-xl text-blue-950 font-semibold pb-5">
+            Beauty And Charisma With A Purpose
+        </p>
+        <div class="border-[1px] w-24  rounded-full border-yellow-500"></div>
+        <div class="lg:w-[80%] w-[85%]">
+            <p class="text-slate-700 lg:text-base mt-5">During the the Pageant show, the Finals will include both
+                female and male contestants. Here is your opportunity to participate in 2022 Competition.</p>
+            <p class="text-slate-700 lg:text-base mt-5">Do you have what it takes to woo the ladies? Could you be the
+                romantic lead in a feature Ad or the tough guy in an epic movie? Can you give People Magazine “Eastlands
+                Thriving” a run for their money? If you can act, sing, dance, sell a product with your good looks or
+                perhaps “walk a mean runway”, YOU are what we are looking for!</p>
+            <p class="text-slate-700 lg:text-base mt-5">We are in search of the man who can be a leading man in a
+                romantic story, a public figure who can feature in a reality show, a world-class model who can grace the
+                covers of magazines and a man who is involved in his community.</p>
+            <p class="text-slate-700 lg:text-base mt-5">We are not looking for a bodybuilder (see requirements for a
+                bodybuilder), we need a healthy athletic individual. A true gentleman with charisma and charm who can
+                take the entertainment industry by storm and make Eastlands proud in the MISTER EASTLANDS® 2022
+                competition.</p>
+            <p class="text-slate-700 lg:text-base mt-5">Having a reputable title and a sash is a lot like having a
+                business card or a golden key; it’s a way to get involved in the community or to speak for causes that
+                need to be brought to the forefront.</p>
+            <p class="text-slate-700 lg:text-base mt-5">If you are between the ages of 18-28, from any ward in
+                Eastlands, single with no child, a “go getter”, a well-rounded man who feels you have what it takes get
+                to the Eastlands competition, click APPLY NOW to reserve your spot for the EASTLANDS TITLE in the 2022
+                competition with Finals on July 1st, 2022.
+            </p>
+        </div>
+        <button class="px-8 bg-yellow-500 py-2 text-white my-8">
+            <i><a href="####"></a></i>
+            APPLY NOW
+        </button>
+    </div>
+    <!--_______________________ Beauty Section Ends Here _____________________-->
+
+
+
+    <!--_______________________ Heading Section Ends Here _____________________-->
+    <div class="flex justify-center items-center flex-col">
+        <p class="md:w-[64%] text-center text-xl lg:text-2xl text-yellow-500 font-semibold pt-10">
+            UNIQUE OPPORTUNITY OF A LIFETIME!
+        </p>
+        <p class="md:w-[64%] text-center text-lg lg:text-xl text-blue-950 font-semibold pb-5">
+            Take advantage of our great powerful platform to transform your future!
+        </p>
+        <div class="border-[1px] w-24  rounded-full border-yellow-500"></div>
+    </div>
+    <!--_______________________ Heading Section Ends Here _____________________-->
+
+
+
+
+    <!--_______________________ Picture 1 Section Starts Here _____________________-->
+    <div class="flex justify-around mx-auto mt-32 flex-wrap lg:w-full">
+        <div class="w-96 lg:w-1/2 bg-slate-200">
+            <div class="m-10">
+                <p class="lg:text-3xl text-xl font-medium text-blue-900">
+                    SPECIAL DOUBLE FEATURE – 7-DAY PAGEANT AT THE GREENSPAN MALL GROUND
+                </p>
+                <p class="text-slate-600 lg:text-lg my-3 w-[95%]">
+                    Miss Eastlands will be holding a 7-Day Pageant at the Greenspan Mall Ground in July 1st 2022. You
+                    are
+                    invited to come to the Greenspan Mall Grounds to witness Grand Crowing Gala and see Queen and King
+                    crowned on stage, enjoy the Crowning Gala at the Greenspan Mall Ground and experience the after Gala
+                    party at Davana Hotel while the world watch the grand event on live steam.
+                </p>
+            </div>
+        </div>
+        <div class="w-96 lg:w-1/2 h-[100vh]">
+            <div class="">
+                <img class="w-[100%] lg:h-[100vh]" src="../images/Preliminary9.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!--_______________________ Picture 1 Section Ends Here ________________________-->
+
+
+
+    <!--_______________________ Picture 2 Section Starts Here _____________________-->
+    <div class="flex justify-around mx-auto flex-wrap lg:w-full mb-32">
+        <div class="w-96 lg:w-1/2 h-[100vh]">
+            <div class="">
+                <img class="w-[100%] lg:h-[100vh]" src="../images/models2-1-1-scaled.jpg" alt="">
+            </div>
+        </div>
+        <div class="w-96 lg:w-1/2 bg-slate-200">
+            <div class="m-10">
+                <p class="lg:text-3xl text-xl font-medium text-blue-900">
+                    PEOPLE’S CHOICE VOTING AWARD – CONTESTANTS EARN MONEY
+                </p>
+                <p class="text-slate-600 lg:text-lg my-3 w-[95%]">
+                    People’s Choice Eastlands Queen/King is chosen by people of the world. The pageant judges’ remarks
+                    are final. (To clarify, People’s Choice Eastlands Queen or King chosen by people of the world
+                    contributes to the judges’ final remarks). Voting will take place on MISS EASTLANDS ORGANIZATION
+                    website and possibly on MISS EASTLANDS ORGANIZATION Facebook fan page. Voters will be able to
+                    purchase as many votes as many times as they want every day until 1st July, 2022. Each vote costs
+                    Ksh. 500. 20% of the amount raised by contestant from voting will be granted to each contestant.
+                    Contestants can donate to the charity or good cause of their choice. To promote voting, constants
+                    are welcome to aggressively promote voting to anyone around the world including family, friends,
+                    fans, even by paid advertising.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--_______________________ Picture 2 Section Ends Here ________________________-->
+
+    <!--_______________________ Heading Section Ends Here _____________________-->
+    <div class="flex justify-center items-center flex-col">
+        <p class="md:w-[64%] text-center text-xl lg:text-2xl text-yellow-500 font-semibold pt-10">
+            MR & MISS EASTLANDS 2022
+        </p>
+        <p class="md:w-[64%] text-center text-lg lg:text-xl text-blue-950 font-semibold pb-5">
+            Beauty And Charisma With A Purpose
+        </p>
+        <div class="border-[1px] w-24 mb-8  rounded-full border-yellow-500"></div>
+        <p class="md:w-[64%] text-center text-xl lg:text-2xl text-yellow-500 font-semibold pt-10">
+            WHY WE FUNDRAISE
+        </p>
+    </div>
+    <!--_______________________ Heading Section Ends Here _____________________-->
+
+
+
+
+    <!--_______________________ Pictures  Section Starts Here _____________________-->
+    <div class="flex items-center justify-around mx-auto flex-wrap lg:w-full mb-20">
+        <div class="flex items-center justify-around mx-auto flex-wrap lg:w-full my-20">
+            <div class="w-[80%] lg:w-3/12 h-[35vh] m-3">
+                <img class="w-[100%] h-[100%]" src="../images/slide1-200x200.jpeg" alt="">
+            </div>
+            <div class="w-[80%] lg:w-3/12 h-[35vh] m-3">
+                <img class="w-[100%] h-[100%]" src="../images/slide2-200x200.jpeg" alt="">
+            </div>
+            <div class="w-[80%] lg:w-3/12 h-[35vh] m-3">
+                <img class="w-[100%] h-[100%]" src="../images/q1-200x200.jpeg" alt="">
+            </div>
+            <div class="w-[80%] lg:w-3/12 h-[35vh] m-3">
+                <img class="w-[100%] h-[100%]" src="../images/q2-200x200.jpeg" alt="">
+            </div>
+            <div class="w-[80%] lg:w-3/12 h-[35vh] m-3">
+                <img class="w-[100%] h-[100%]" src="../images/111-200x200.jpeg" alt="">
+            </div>
+            <div class="w-[80%] lg:w-3/12 h-[35vh] m-3">
+                <img class="w-[100%] h-[100%]" src="../images/112-200x200.jpeg" alt="">
+            </div>
+        </div>
+        <div>
+            <button class="px-8 bg-yellow-500 py-2 text-white">
+                <i><a href="####"></a></i>
+                APPLY NOW
+            </button>
+        </div>
+    </div>
+
+    <!--_______________________ Pictures Section Ends Here _____________________-->
+
+
+    <!--_______________________ Beauty Section Starts Here _____________________-->
+    <div id="content" class="flex justify-center items-center flex-col my-32">
+        <div class="border-[1px] w-24  rounded-full border-yellow-500"></div>
+        <div class="lg:w-[80%] w-[85%]">
+            <p class="text-slate-600 text-base lg:text-lg mt-5">It is important to note that VOTING is one of the
+                vehicles our
+                organization uses to raise funds and support our charity causes. This is who we are and what MISS
+                EASTLANDS ORGANIZATION stands for. Our pageant prides itself on its philanthropic focus, known to have
+                raised funds for entrepreneurial and health causes bettering the lives of some of our Eastlands’ most
+                vulnerable groups: underprivileged youth and young lactating mothers
+                with special needs.</p>
+            <p class="text-slate-600 text-base lg:text-lg mt-5">Contestant’s participation in the voting process is not
+                only
+                about winning the title but it’s also about giving back to the community by demonstrating your
+                selflessness. This year for the first time a portion of the proceeds will be given to contestants so
+                they can donate to the charities of their own choice.Therefore, it is very important to know that it is
+                the responsibility of each and every contestant to contribute towards voting process.</p>
+            <p class="text-slate-600 text-base lg:text-lg mt-5">MISS EASTLANDS® JUDGES EVALUATE YOUR EFFORTS AND THE
+                CREATIVITY
+                YOU DISPLAY IN MAKING THIS PROJECT SUCCESSFUL.</p>
+        </div>
+        <p class="md:w-[64%] text-center text-xl lg:text-2xl text-blue-900 font-semibold pt-10">
+            PHOTO & VIDEO SUBMISSIONS
+        </p>
+        <p class="text-slate-600 text-base w-[80%] lg:text-lg mt-5">Contestants need to submit 1-3 minute videos and
+            photos for
+            various competitions (TALENT video up to 3 minutes). BEAUTIES OF EASTLANDS & MISTER EASTLANDS will produce a
+            breathtaking video montage that will be live streamed worldwide on July 1st, 2022.</p>
+        <p class="md:w-[64%] text-center text-xl lg:text-2xl text-blue-900 font-semibold my-10">
+            SUBMISSIONS REQUIRED FOR COMPETITION: DUE MAY 10th, 2022
+        </p>
+        <div class="shadow-2xl py-20 w-96 lg:w-[90vw] bg-[#f6f6f6]">
+            <ul class="mr-10">
+                <li class="ml-10 mt-1 active:bg-yellow-500 cursor-pointer bg-slate-200 lg:text-base py-2">Swimsuit Model
+                    Award: picture OR video</li>
+                <li class="ml-10 mt-1 active:bg-yellow-500 cursor-pointer bg-slate-200 lg:text-base py-2">Best Evening
+                    Gown/Tuxedo Award: video</li>
+                <li class="ml-10 mt-1 active:bg-yellow-500 cursor-pointer bg-slate-200 lg:text-base py-2">Best Talent
+                    Award (if you have one): video</li>
+                <li class="ml-10 mt-1 active:bg-yellow-500 cursor-pointer bg-slate-200 lg:text-base py-2">Best Speaker
+                    Award (interview): video</li>
+                <li class="ml-10 mt-1 active:bg-yellow-500 cursor-pointer bg-slate-200 lg:text-base py-2">Best Sport
+                    Award: video</li>
+                <li class="ml-10 mt-1 active:bg-yellow-500 cursor-pointer bg-slate-200 lg:text-base py-2">Photogenic
+                    Award: 6 pictures</li>
+                <li class="ml-10 mt-1 active:bg-yellow-500 cursor-pointer bg-slate-200 lg:text-base py-2">Music Video
+                    Acting Award</li>
+                <li class="ml-10 mt-1 active:bg-yellow-500 cursor-pointer bg-slate-200 lg:text-base py-2">Top Model
+                    Award (Judged from all videos & pictures submissions)</li>
+                <li class="ml-10 mt-1 active:bg-yellow-500 cursor-pointer bg-slate-200 lg:text-base py-2">Eastlands’
+                    Most Beautiful Face Award (Judged from all videos & pictures submissions)</li>
+                <li class="ml-10 mt-1 active:bg-yellow-500 cursor-pointer bg-slate-200 lg:text-base py-2">Best Hair &
+                    Makeup Award (Judged from all videos & pictures submissions)</li>
+                <li class="ml-10 mt-1 active:bg-yellow-500 cursor-pointer bg-slate-200 lg:text-base py-2">Social Media
+                    Genius Award (Collected by judges from your social media)</li>
+            </ul>
+        </div>
+    </div>
+    <!--_______________________ Beauty Section Ends Here _____________________-->
+
+
+
+
+    <!--_______________________ Cards Section Starts Here _____________________-->
+    <div class="flex justify-center items-center flex-col mt-32">
+        <div
+            class="shadow-2xl py-20 w-96 lg:w-[90vw] bg-yellow-500 text-center flex justify-center items-center flex-col">
+            <p class="text-black text-base lg:text-lg font-semibold mt-5 w-[80%]">PRESENTING 15 PRESTIGIOUS
+                BEAUTIFUL CROWNS, CUSTOM-MADE
+                TOP-QUALITY SATIN SASHES WITH RHINESTONES & 22 FIRST-CLASS AWARDS CROWNING A QUEEN & KING</p>
+            <p class="text-blue-900 text-lg lg:text-xl font-bold mt-5 w-[80%]">KSH. 500,000 WORTH OF PRIZES
+            </p>
+            <p class="text-black text-base lg:text-lg font-semibold mt-5 w-[80%]">EACH CONTESTANT WILL BE
+                FEATURED IN THE EASTLANDS THRIVING MAGAZINE TOP WINNERS WILL GRACE THE COVER OF THIS MAGAZINE!
+            </p>
+            <div>
+                <button class="px-8 my-5 bg-slate-200 py-2 text-black">
+                    <i><a href="####"></a></i>
+                    APPLY NOW
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!--_______________________ Cards Section Ends Here _____________________-->
+
+    <!--_______________________ Pictures Cards  Section Starts Here _____________________-->
+    <div class="flex items-center justify-around mx-auto flex-wrap lg:w-full">
+        <div class="flex items-center justify-center gap-2 mx-auto flex-wrap lg:w-full my-20">
+            <div class="w-[80%] lg:w-3/12 h-[70vh] ">
+                <img class="w-[100%] h-[100%]" src="../images/Cover-2.jpg" alt="">
+            </div>
+            <div class="w-[80%] lg:w-3/12 h-[70vh] ">
+                <img class="w-[100%] h-[100%]" src="../images/Cover-3.jpg" alt="">
+            </div>
+            <div class="w-[80%] lg:w-3/12 h-[70vh] ">
+                <img class="w-[100%] h-[100%]" src="../images/Cover-1.jpg" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--_______________________ Pictures Cards Section Ends Here _____________________-->
+
+
+
+    <!--_______________________ Text Cards Section Starts Here _____________________-->
+    <div class="flex flex-col my-14 w-[100%] justify-center items-center">
+        <p class="md:w-[70%] text-center text-xl lg:text-2xl text-yellow-500 font-semibold pt-10">
+            DETAILS ON SUBMISSIONS REQUIRED & 22 AWARDS FOR PAGEANT 2022
+        </p>
+        <div class="flex flex-col my-5 w-[90%]">
+            <div class="flex text-center gap-3 item-center my-5">
+                <i class='far fa-arrow-alt-circle-right text-yellow-500'></i>
+                <p class="leading-loose -mt-2">Make sure you wear your sash in all submissions. Sash ironed and logo
+                    visible</p>
+            </div>
+            <div class="flex text-center gap-3 item-center my-5 ">
+                <i class='far fa-arrow-alt-circle-right text-yellow-500'></i>
+                <p class="leading-loose -mt-2">Make sure you wear proper make up, hair and wardrobe</p>
+            </div>
+            <div class="flex text-center gap-3 item-center my-5">
+                <i class='far fa-arrow-alt-circle-right text-center text-yellow-500'></i>
+                <p class="leading-loose -mt-2"> To bring the highest quality of your pictures and videos use proper
+                    lighting</p>
+            </div>
+            <div class="flex text-center gap-3 item-center my-5">
+                <i class='far fa-arrow-alt-circle-right text-center text-yellow-500'></i>
+                <p class="leading-loose -mt-2">You may choose professional cameras or smart phone cameras for pictures
+                    and videos</p>
+            </div>
+            <div class="flex text-center gap-3 item-center my-5">
+                <i class='far fa-arrow-alt-circle-right text-center text-yellow-500'></i>
+                <p class="leading-loose -mt-2">You will be provided a link to your personal folder on OneDrive to upload
+                    your submissions</p>
+            </div>
+            <div class="flex text-center gap-3 item-center my-5">
+                <i class='far fa-arrow-alt-circle-right text-center text-yellow-500'></i>
+                <p class="leading-loose -mt-2">Deadline for all submissions is on or before April 30th, 2022</p>
+            </div>
+            <div class="flex text-center gap-3 item-center my-5">
+                <i class='far fa-arrow-alt-circle-right text-center text-yellow-500'></i>
+                <p class="leading-loose -mt-2">All your pictures & videos submissions will be evaluated by judges</p>
+            </div>
+        </div>
+        <div class="flex justify-center items-center flex-col w-[90%]">
+            <div class="mt-10">
+                <span class="lg:text-xl text-lg text-yellow-500 font-semibold">PHOTOGRAPHY</span>
+                <p class="text-slate-600 text-base lg:text-lg"> You can have your video/photo-shoot sponsored. Most of
+                    the past years’ contestants had their
+                    photo/video sessions taken at no charge as the photographers get powerful exposure. Photographers
+                    can have their credit at the right bottom corner of the picture/video per MR & MISS EASTLANDS
+                    photo/video standards. These pictures/videos will be used for media publications, press releases,
+                    marketing, and will be posted on MISS EASTLANDS ORGANIZATION’S website and Social Media. The
+                    photos/videos will be judged on clarity and quality of photo (not print), personality, grooming,
+                    creativity, fashion sense, the contestant’s photogenic potential and ability.</p>
+            </div>
+            <div class="mt-10">
+                <span class="lg:text-xl text-lg text-yellow-500 font-semibold">PHOTOGRAPHY</span>
+                <p class="text-slate-600 text-base lg:text-lg"> You can have your video/photo-shoot sponsored. Most of
+                    the past years’ contestants had their
+                    photo/video sessions taken at no charge as the photographers get powerful exposure. Photographers
+                    can have their credit at the right bottom corner of the picture/video per MR & MISS EASTLANDS
+                    photo/video standards. These pictures/videos will be used for media publications, press releases,
+                    marketing, and will be posted on MISS EASTLANDS ORGANIZATION’S website and Social Media. The
+                    photos/videos will be judged on clarity and quality of photo (not print), personality, grooming,
+                    creativity, fashion sense, the contestant’s photogenic potential and ability.</p>
+            </div>
+            <div class="mt-10">
+                <span class="lg:text-xl text-lg text-yellow-500 font-semibold">SCORING SYSTEM</span>
+                <p class="text-slate-600 text-base lg:text-lg"> You can have your video/photo-shoot sponsored. Most of
+                    the past years’ contestants had their
+                    The judges will be scoring the Contestants using the following criteria: physical appearance, poise,
+                    display of energy, charisma, sense of confidence and composure, and overall, first impression and
+                    presentation</p>
+            </div>
+            <div class="mt-10">
+                <span class="lg:text-xl text-lg text-yellow-500 font-semibold">SWIMSUIT MODEL AWARD (PICTURE OR
+                    VIDEO)</span>
+                <p class="text-slate-600 text-base lg:text-lg"> You can have your video/photo-shoot sponsored. Most of
+                    Maximum 1-minuteminute video. Be creative in choosing the photoshoot/video locations. The walk: walk
+                    towards the camera, when close to camera but whole body is visible, strike a pose (turn both sides),
+                    walk back and make a pose before leaving the stage. The swimsuit competition is a prominent segment
+                    of the MR & MISS EASTLANDS pageant as most of our prospective delegates are committed to health and
+                    fitness. Female contestants will need a two-piece or one-piece swimsuit and high heels. Swimsuits
+                    can be traditional, or they can reflect current fashion trends as long as they consist of a short
+                    top and a short bottom or a 2-piece active wear with a short top and a short bottom rather than a
+                    2-piece swimsuit. Male contestants will need a swim trunk. You are also welcomed to use accessories:
+                    scarfs, jewelry, etc. If you want to be exempt from this competition and have a valid reason, we
+                    will apply for your exemption and if granted you will not lose points. – 1st 2nd & 3rd place Award.
+                </p>
+            </div>
+            <div class="mt-10">
+                <span class="lg:text-xl text-lg text-yellow-500 font-semibold">BEST EVENING GOWN/ TUXEDO AWARD
+                    (VIDEO)</span>
+                <p class="text-slate-600 text-base lg:text-lg"> Mandatory Competition. Maximum 1-minute video. Be
+                    creative in choosing the video locations. Look for classy, elegant atmosphere; example: hotel lobby,
+                    beautiful restaurants, historical buildings etc. The walk: walk towards the camera, when close to
+                    camera but whole body is visible, strike a pose (turn both sides), walk back and make a pose before
+                    leaving the stage. The evening gown/tuxedo can be the best one you own or donated/loaned by
+                    sponsors. You will be able to mention the designers name on your video and posts in Social Media. –
+                    1st 2nd & 3rd place Award.</p>
+            </div>
+            <div class="mt-10">
+                <span class="lg:text-xl text-lg text-yellow-500 font-semibold">BEST TALENT AWARD (IF YOU HAVE ONE,
+                    VIDEO)</span>
+                <p class="text-slate-600 text-base lg:text-lg"> Optional Competition. Best Talent competition is a solo
+                    competition; however, if you need, you may have one partner or one assistant only. It is the best
+                    way display your talent. For example, your talent can be singing, playing an instrument, dancing,
+                    preforming martial art routine, any exemptional routine with your pet, etc. You should prepare a
+                    presentation, and it is strictly not to exceed the 3-minute time limit. Your performance scores are
+                    based on your skills, costume/appearance, performance and overall impression. – 1st 2nd & 3rd place
+                    Award.</p>
+            </div>
+            <div class="mt-10">
+                <span class="lg:text-xl text-lg text-yellow-500 font-semibold">BEST SPEAKER AWARD (INTERVIEW
+                    VIDEO)</span>
+                <p class="text-slate-600 text-base lg:text-lg">Mandatory Competition. Maximum 1-minute per video. Be
+                    creative in choosing the video locations. Please wear a cocktail dress/suit & tie. Video one,
+                    question one: “HOW ARE YOU GOING TO USE YOUR PLATFORM IN YOUR LIFE?”. Video two, question two: “HOW
+                    WAS YOUR EXPERIENCE AS A FINALIST?”. – 1st 2nd & 3rd place Award.</p>
+            </div>
+            <div class="mt-10">
+                <span class="lg:text-xl text-lg text-yellow-500 font-semibold">BEST SPORT AWARD (VIDEO)</span>
+                <p class="text-slate-600 text-base lg:text-lg"> Mandatory Competition. Maximum 1-minute video. Choose
+                    your favorite sport or activity and display it in the most creative manner. This Award is given to a
+                    Delegate with the most agility, endurance and flexibility. – 1st 2nd & 3rd place.</p>
+            </div>
+            <div class="mt-10">
+                <span class="lg:text-xl text-lg text-yellow-500 font-semibold">PHOTOGENIC AWARD (6 PICTURES)</span>
+                <p class="text-slate-600 text-base lg:text-lg"> Mandatory Competition. Contestants must submit 6
+                    high-resolution photos before deadline. Photo- shoot requirements: contestant must wear the MR &
+                    MISS EASTLANDS sash with the logo visible (photos without Sash will be disqualified, MR & MISS
+                    EASTLANDS logos do not replace the sash). Being creative, stylish, having nice makeup and hair,
+                    proper lighting and background is a key! – 1st
+                    2nd & 3rd place Award.</p>
+            </div>
+            <div class="mt-10">
+                <span class="lg:text-xl text-lg text-yellow-500 font-semibold">MUSIC VIDEO ACTING AWARD</span>
+                <p class="text-slate-600 text-base lg:text-lg">Mandatory Competition. All contestants to sing the same
+                    full song provided by MR & MISS EASTLANDS and record a video of it. MR & MISS EASTLANDS will create
+                    a montage of small clips with each one of you making it into the full song music video. MR & MISS
+                    EASTLANDS will create a music video including all contestant’s clips submission with the original
+                    song audio (your voices will not be revealed). This is your moment to be a music star! Create fun,
+                    unique video, wearing your very favorite outfit with your sash. The whole World will watch you
+                    through live streaming! – 1st 2nd & 3rd place Award.</p>
+            </div>
+            <div class="mt-10">
+                <span class="lg:text-xl text-lg text-yellow-500 font-semibold">TOP MODEL AWARD</span>
+                <p class="text-slate-600 text-base lg:text-lg">You do not need to submit any photos or videos for this
+                    competition. Award based on confidence and catwalk. Judges will choose winners based on your
+                    previous submissions. – 1st 2nd & 3rd place Award.</p>
+            </div>
+            <div class="mt-10">
+                <span class="lg:text-xl text-lg text-yellow-500 font-semibold">WORLD’S MOST BEAUTIFUL FACE AWARD</span>
+                <p class="text-slate-600 text-base lg:text-lg"> You do not need to submit any photos or videos for this
+                    competition. Awarded to contestants voted to have the most beautiful face. Judges will choose
+                    winners based on your previous submissions. – 1st 2nd & 3rd place Award.</p>
+            </div>
+            <div class="mt-10">
+                <span class="lg:text-xl text-lg text-yellow-500 font-semibold">BEST HAIR & MAKEUP AWARD</span>
+                <p class="text-slate-600 text-base lg:text-lg"> You do not need to submit any photos or videos for this
+                    competition. Awarded to contestants voted to have the best make up & hair. Judges will choose
+                    winners based on your previous submissions. – 1st 2nd & 3rd place Award.</p>
+            </div>
+            <div class="mt-10">
+                <span class="lg:text-xl text-lg text-yellow-500 font-semibold">SOCIAL MEDIA GENIUS AWARD (COLLECTED BY
+                    JUDGES FROM YOUR SOCIAL MEDIA)</span>
+                <p class="text-slate-600 text-base lg:text-lg"> Mandatory Competition. As soon as we receive your
+                    pageant fee deposit and your place in the pageant is secured, you will be required to announce your
+                    new title of EASTLANDS AMBASSADOR in your social media channels such as FACEBOOK, INSTAGRAM, and
+                    other ones. You must post at least once a day on each channel. Your posts have to have you wearing
+                    your sash. If your post has several pictures, the first primary picture has to be with your sash and
+                    the rest of the pictures do not require sash. We will be judging the quality, professionalism, and
+                    numbers of likes you get and post engagement with your fans. When MR & MISS EASTLANDS posts any
+                    promotional items on Facebook and Instagram, all contestants have to like the posts and share on
+                    their MR & MISS EASTLANDS Facebook Fan Page, on the personal Facebook, Instagram and other social
+                    media channels. This is to remind you that this competition counts as 20% of the judging score.
+                    Please note that this award is separate from the People’s Choice Title. 1st 2nd & 3rd place Award.
+                </p>
+            </div>
+            <p class="md:w-[100%] text-center text-xl lg:text-2xl text-yellow-500 font-semibold pt-10">
+                MR & MISS EASTLANDS 2022
+            </p>
+            <p class="md:w-[100%] text-center text-lg lg:text-xl text-blue-950 font-semibold pb-5">
+                Beauty And Charisma With A Purpose
+            </p>
+            <div class="border-[1px] w-24  rounded-full border-yellow-500"></div>
+            <p class="md:w-[100%] text-center text-xl lg:text-2xl text-yellow-500 font-semibold pt-10">
+                5 PRESTIGIOUS BEAUTIFUL CROWNS, CUSTOM-MADE TOP-QUALITY SATIN SASHES WITH RHINESTONES & 24 FIRST-CLASS
+                AWARDS
+            </p>
+            <p class="md:w-[100%] text-center text-lg lg:text-xl text-blue-950 font-semibold pb-5">
+                CROWNING CEREMONY & AWARDS PRESENTATION
+            </p>
+            <p class="text-slate-600 text-base lg:text-lg"> You can witness Grand Crowing Gala and see the Queen and
+                King crowned on stage, enjoy the host experience and let the world watch the Grand event on live steam.
+            </p>
+            <div class="mt-10">
+                <span class="lg:text-xl text-lg text-yellow-500 font-semibold">SCOPE OF WINNERS</span>
+                <p class="text-slate-600 text-base lg:text-lg"> This to say that winners don’t get title for a small
+                    neighborhood, or a ward or a constituency or just Eastlands but gets the world with 144 countries or
+                    a continent that contains lots of countries!!!! At the finals, here are the Titles & Crowns Awarded.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--_______________________ Text Cards Section Ends Here _____________________-->
+
+
+
+    <!--_______________________ picture Cards Section Starts Here _____________________-->
+    <div class="my-32 w-full flex justify-center items-center flex-col">
+        <img src="./dist/images/prizes/ME1.jpg" alt="">
+        <p class="md:w-[90%] text-center text-xl lg:text-2xl text-blue-900 font-semibold pb-5 pt-10">
+            22 AWARD WINNERS
+        </p>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-lg text-yellow-500">SWIMSUIT MODEL </span>
+            <p class="text-slate-600 text-base lg:text-lg"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-lg text-yellow-500">BEST EVEING GOWN/TUXEDO </span>
+            <p class="text-slate-600 text-base lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">BEST TALENT </span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">BEST SPEAKER</span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">BEST SPORT </span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">PHOTOGENIC</span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">MUSIC VIDEO ACTING</span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">TOP MODEL </span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">EASTLANDS’ MOST BEAUTIFUL FACE </span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">BEST HAIR & MAKEUP </span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">SOCIAL MEDIA GENIUS </span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div>
+            <button class="px-8 my-5 bg-yellow-500 py-2 text-white">
+                <i><a href="####"></a></i>
+                SEE PROGRAM BOOK
+            </button>
+        </div>
+        <p class="md:w-[90%] text-center text-xl lg:text-2xl text-blue-900 font-semibold pb-5 pt-10">
+            TWO ADDITIONAL DISTINCTION AWARDS
+        </p>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">PEOPLE’S CHOICE AWARD & VOTING</span>
+            <p class="text-slate-600 text-base lg:text-lg"> The winner of PEOPLE’S CHOICE Award will receive Eastlands
+                Queen or King title along with a sash and a Crown (To clarify, People’s Choice Eastlands Queen or King
+                is chosen by people of the world and the marks will contribute to the final Pageant Judges’ marks).
+                Voting will take place on MISS EASTLANDS ORGANIZATION’S website and possibly on MISS EASTLANDS
+                ORGANIZATION’S Facebook fan page. Voters will be able to purchase as many votes as many times as they
+                want every day until July 1st, 2022. Each vote costs Ksh. 500 on our website and Ksh. 10 via sms. 20% of
+                the amount raised by contestant from voting will be granted to each contestant. Contestants to donate to
+                the charity or good cause of their choice. To promote voting constants are welcome to aggressively
+                promote voting to anyone around the world including family, friends, fans, even by paid advertising.</p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">MISS CONGENIALITY AWARD</span>
+            <p class="text-slate-600 text-base lg:text-lg"> This award is bestowed upon delegates who display positivity
+                and an enthusiastic spirit in all pageant-related activities as well as interactions with the other
+                delegates, the MR & MISS EASTLANDS team, while continuing to be a role model for other young men/women.
+            </p>
+        </div>
+        <p class="md:w-[90%] text-center text-xl lg:text-2xl text-blue-900 font-semibold pb-5 pt-10">
+            EASTLANDS PAGEANT & MODELING ON A 7-NIGHT LUXURY EVENT 2022
+        </p>
+        <div class="mt-10 w-[90%]">
+            <p class="text-slate-600 text-base lg:text-lg">We will be holding our Pageant Week and the Coronation Gala
+                at the Greenspan Mall Ground and Davana Hotel to bring unforgettable experience to our contestants,
+                their families, friends and sponsors.</p>
+            <p class="text-slate-600 text-base mt-10 lg:text-lg">2022 PAGEANT: July 1st, 2021 on a 7-Day Event at the
+                Greenspan Mall Ground and Davana Hotel.</p>
+            <p class="text-slate-600 text-base mt-10 lg:text-lg">Only 6 hours a day will be dedicated towards training
+                so you
+                can enjoy vacation with your family and friends. The rest of the time, you can network with
+                professionals invited from the fashion, talent, entertainment and film Industry as well as meet over
+                1,000 visitors at the Greenspan Mall and Davana Hotel. For 7 days, you will be the center of attraction.
+                The swimsuit competition will be held in the pool area of the hosts, talent competition and the GRAND
+                CORONATION GALA crowning a Queen and a King and presentation of 30 Awards will be held at the Greenspan
+                Mall Ground.</p>
+            <p class="text-slate-600 text-base mt-10 lg:text-lg">For more details please visit “FACE OF EASTLANDS”
+                section on this website. Your family & friends can join you on the Crowning Gala.</p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">Here Are Some Of Beauties Of Eastlands’
+                Features And Hallmarks At A Glance</span>
+            <p class="text-slate-600 text-base lg:text-lg"> Contestants are automatically entered in the National
+                Modeling and Talent Roster on our website so their branding process starts and they can start landing on
+                jobs in the Modeling, Filming and Talent field.
+            </p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">YOU ON THE COVER OF FASHION MAGAZINE WITH
+                EXCLUSIVE PHOTO-SHOOT</span>
+            <p class="text-slate-600 text-base lg:text-lg"> Eastlands Queen, King and People’s Choice Queen and King
+                will be featured on the cover of EASTLANDS MODEL & TALENT Fashion Magazine with published story and
+                photos in 3 pages for each cover winners.
+            </p>
+            <p class="text-slate-600 text-base lg:text-lg mt-10"> Future finals can be held anywhere in Eastlands.
+                Imagine yourself journeying to exciting destinations in Eastlands! A great opportunity to meet boys and
+                girls from different constituencies and different cultures. From the time you join the pageant to the
+                time of finals, you will accumulate a very large amount of fans that are business people, professionals
+                and VIPs around the word.
+            </p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">WHAT HAPPENS BETWEEN NOW AND THE FINALS? AND
+                AFTER THE FINALS?</span>
+            <p class="text-slate-600 text-base lg:text-lg"> After you join the pageant, you receive your SASH, you get
+                announced on our social media platforms that have over half a million viewers that you are now a
+                FINALIST and you get the title of EASTLANDS AMBASSADOR. You start announcing your new Title in your
+                social media and to all your contacts. MISS EASTLANDS ORGANIZATION on their side will announce in all
+                their social media platforms, they give you tools such as email templates and guidelines for you to
+                brand yourself in more effective way. Your BRANDING process will help you accumulate a large base of
+                fans locally and around the world. You start getting invited to make appearances as VIP & RED-CARPET
+                GUEST to events, get stage presence, attend fashion shows, charity functions, etc. Media starts paying
+                attention to you, inviting you to TV, Radio or Magazine interviews. In short, you become the center of
+                attention. This powerful database of your fans is a mix of Business Professionals, VIPs, People from the
+                Fashion, Film and Entertainment Industry as well as friends from around the world. This is a powerful
+                asset you can build your career and future business with. After the finals, when you hold the title of
+                Queen or King, this is when you reach the pick in your branding process. Many of our title holders say
+                they enjoy celebrity status with many fans locally and around the world. The attention level and number
+                of invitations to the events with great opportunities to network and expand your career increases
+                substantially.
+            </p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">WHAT HAPPENS BETWEEN NOW AND THE FINALS? AND
+                AFTER THE FINALS?</span>
+            <p class="text-slate-600 text-base lg:text-lg"> After you join the pageant, you receive your SASH, you get
+                announced on our social media platforms that have over half a million viewers that you are now a
+                FINALIST and you get the title of EASTLANDS AMBASSADOR. You start announcing your new Title in your
+                social media and to all your contacts. MISS EASTLANDS ORGANIZATION on their side will announce in all
+                their social media platforms, they give you tools such as email templates and guidelines for you to
+                brand yourself in more effective way. Your BRANDING process will help you accumulate a large base of
+                fans locally and around the world. You start getting invited to make appearances as VIP & RED-CARPET
+                GUEST to events, get stage presence, attend fashion shows, charity functions, etc. Media starts paying
+                attention to you, inviting you to TV, Radio or Magazine interviews. In short, you become the center of
+                attention. This powerful database of your fans is a mix of Business Professionals, VIPs, People from the
+                Fashion, Film and Entertainment Industry as well as friends from around the world. This is a powerful
+                asset you can build your career and future business with. After the finals, when you hold the title of
+                Queen or King, this is when you reach the pick in your branding process. Many of our title holders say
+                they enjoy celebrity status with many fans locally and around the world. The attention level and number
+                of invitations to the events with great opportunities to network and expand your career increases
+                substantially.
+            </p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">TAKE A BETTER SHOT AT BETTER JOBS WITH YOUR
+                KEY TO THE FUTURE</span>
+            <p class="text-slate-600 text-base lg:text-lg">MISS EASTLANDS® provides you with a powerful International
+                platform to help you brand yourself and set yourself apart from others, so you easily get noticed by
+                potential recruiters. MISS EASTLANDS® delegates automatically become part of the MISS EASTLANDS®
+                Recruitment Department. Delegate are given a dedicated page on our website increasing significantly
+                chances of landing on jobs in the modeling, entertainment, film, and corporate worlds. Participating in
+                MISS EASTLANDS® could be the first step to a lead role in a feature film, or a magazine cover that may
+                give your favorite celebrities a run for their money! You could reinvent the fashion industry or, if you
+                can act, sing or dance, you may be able to sell products with your good looks, charm and striking
+                personality. Simply by participating in the pageant you have the chance to gain a powerful worldwide
+                identity. You will receive recognition that has the potential to open doors to unlimited possibilities.
+                Over the years, this powerful platform has positively transformed the lives of many contestants. Use
+                these opportunities to brand yourself with prestige, dignity, and, ultimately, to make your dreams come
+                true the sky really is the limit. Remember, the key to the future is now in your hands!
+            </p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">HOW MUCH TIME YOU NEED TO DEDICATE TOWARDS
+                THE PAGEANT?</span>
+            <p class="text-slate-600 text-base lg:text-lg">The MISS EASTLANDS® Pageant has been carefully designed to
+                accommodate our delegates’ busy lives. We understand that you are all multi-taskers, managing your
+                education, jobs and careers, extra-curricular activities, charities and causes, and personal lives. Our
+                program is sensibly distributed so that you can make efficient use of, on average, one hour per week as
+                you prepare to take the stage at the Grand Coronation Gala. As the Gala approaches, you may wisely
+                decide to increase your time commitment as you see fit.
+            </p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">EMPOWERING VULNERABLE YOUNG MEN &
+                WOMEN</span>
+            <p class="text-slate-600 text-base lg:text-lg">Miss Eastlands® for 4 years, and 6 years in the pageant
+                business, we launched the Eastlands edition MR & MISS EASTLANDS® bringing forth bold changes to further
+                empower young men and women while responding to modern-day pageantry demands and meeting the needs of
+                modern contestants. Media have called our new format “The Tesla of Pageants” referring to this is the
+                future of pageants. To pave the way for their futures, contestants are provided a development program
+                that consists of leadership and life coaching by reknown mentors such as Terry Mungai of Ashleys Hair
+                and Beauty Academy, Pamela Gatwiri of PAM NAIL LAQUE, and Jeffery Wilson, CEO and Founder of JW Show as
+                well as awarded a one-year Training scholarship, a world class leadership program. At the finals you
+                will receive a valuable CERTIFICATE OF COMPLETION OF THE DEVELOPMENT PROGRAM. This certificate will
+                carry a lot of weight when you apply for jobs or prospecting for business, it will set you apart from
+                other applications.
+            </p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">CROWNING THE QUEEN & THE KING & 22
+                AWARDS</span>
+            <p class="text-slate-600 text-base lg:text-lg">Under the pageant’s new format each constituency is awarded
+                its own QUEEN and KING giving in total 24 crowns. This gives the crown holders the opportunity to visit
+                other places if they want to, be a government VIP guest, meet the beauty Queen of Eastlands, all paid by
+                that host.
+            </p>
+            <p class="text-slate-600 text-base lg:text-lg mt-10">After you join the pageant, you receive your SASH, you
+                get announced on our social media platforms that have over half a million viewers that you are now a
+                FINALIST and you get the title of EASTLANDS AMBASSADOR. Your BRANDING process starts where you start
+                accumulating a large base of fans locally and around the world. You start getting invited to make
+                appearances as VIP & RED CARPET GUEST to events, get stage presence, attend fashion shows, charity
+                functions, etc. Media starts paying attention to you inviting you to TV, Radio or Magazine interviews.
+                In short you become the center of attraction. This powerful database of your fans are a mix of Business
+                People, Professionals, VIPs, People from the Fashion, Film and Entertainment Industry as well as friends
+                from around the world. This is a powerful asset you can build for your career and future business you
+                might own.
+            </p>
+            <p class="text-slate-600 text-base lg:text-lg mt-10">The primary function of contestants is to promote
+                DIVERSITY and help POVERTY ELIMINATION projects which contributes to the overall WORLD PEACE process.
+                Secondly, support charities of underprivileged youth, young and vulnerable lactating mothers, children
+                and the elderly with special needs. Our pageant prides itself on its philanthropic focus, known to have
+                supported various community projects. Together, under our renowned banner, we can showcase young men’s
+                charisma and women’s inner beauty as displayed through charitable acts and dedication to global causes.
+            </p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">22 AWARD & MEDAL WINNERS</span>
+            <p class="text-slate-600 text-base lg:text-lg">All contestants will have the opportunity to win awards and
+                medals. As there are ten internal pageant competitions in total, each competition will have a 1st, 2nd
+                and 3rd-place winner.
+            </p>
+            <p class="text-slate-600 text-base lg:text-lg mt-10">In other words, you become a Queen or King of entire
+                Eastlands that’s composed of 12 constituencies. You are not holding title of a small neighborood, or a
+                ward or just one constituency but have an entire Eastlands! At the finals, below are the tiles that will
+                be awarded to the top contestants.
+            </p>
+        </div>
+    </div>
+    <!--_______________________ picture Cards Section Ends Here _____________________-->
+
+
+    <!--_______________________ Section 4  Starts Here _____________________-->
+    <div class="flex justify-around mx-auto mb-32 flex-wrap lg:w-full">
+        <div class="lg:w-1/2 w-[90%] bg-slate-200">
+            <div>
+                <p class="mt-10 text-blue-900 text-2xl font-bold text-center">QUEEN OF EASTLANDS (MISS EMBAKASI EAST)
+                </p>
+            </div>
+            <div class="mb-10 ml-10 text-base lg:text-xl">
+                <p class="my-5 ">MISS EMBAKASI NORTH</p>
+                <p class="my-5">MISS EMBAKASI EAST</p>
+                <p class="my-5">MISS EMBAKASI SOUTH</p>
+                <p class="my-5">MISS EMBAKASI CENTRAL</p>
+                <p class="my-5">MISS EMBAKASI WEST</p>
+                <p class="my-5">MISS ROYSAMBU</p>
+                <p class="my-5">MISS KASARANI</p>
+                <p class="my-5">MISS RUARAKA</p>
+                <p class="my-5">MISS MAKADARA</p>
+                <p class="my-5">MISS KAMUKUNJI</p>
+                <p class="my-5">MISS STAREHE</p>
+                <p class="my-5">MISS MATHARE</p>
+                <p class="my-5">QUEEN – People Choice Award</p>
+                <p class="my-5">QUEEN – Miss Congeniality Award</p>
+            </div>
+        </div>
+        <div class="lg:w-1/2 w-[90%] bg-yellow-500">
+            <div>
+                <p class="mt-10 text-blue-900 text-2xl font-bold text-center">EASTLANDS KING (MR EMBAKASI EAST)</p>
+            </div>
+            <div class="mb-10 ml-10 text-white lg:text-xl text-base">
+                <p class="my-5">MISS EMBAKASI NORTH</p>
+                <p class="my-5">MISS EMBAKASI EAST</p>
+                <p class="my-5">MISS EMBAKASI SOUTH</p>
+                <p class="my-5">MISS EMBAKASI CENTRAL</p>
+                <p class="my-5">MISS EMBAKASI WEST</p>
+                <p class="my-5">MISS ROYSAMBU</p>
+                <p class="my-5">MISS KASARANI</p>
+                <p class="my-5">MISS RUARAKA</p>
+                <p class="my-5">MISS MAKADARA</p>
+                <p class="my-5">MISS KAMUKUNJI</p>
+                <p class="my-5">MISS STAREHE</p>
+                <p class="my-5">MISS MATHARE</p>
+                <p class="my-5">QUEEN – People Choice Award</p>
+                <p class="my-5">QUEEN – Miss Congeniality Award</p>
+            </div>
+        </div>
+    </div>
+    <!--_______________________ Section 4  Ends Here _____________________-->
+
+
+    <!-- _____________________________Section 5 Starts Here______________________ -->
+    <div class="flex items-center justify-center flex-col">
+        <p class="md:w-[90%] text-center text-xl lg:text-2xl text-blue-900 font-semibold pb-5 pt-10">
+            AWARD WINNERS
+        </p>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-lg text-yellow-500">SWIMSUIT MODEL </span>
+            <p class="text-slate-600 text-base lg:text-lg"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-lg text-yellow-500">BEST EVEING GOWN/TUXEDO </span>
+            <p class="text-slate-600 text-base lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">BEST TALENT </span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">BEST SPEAKER</span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">BEST SPORT </span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">PHOTOGENIC</span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">MUSIC VIDEO ACTING</span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">TOP MODEL </span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">EASTLANDS’ MOST BEAUTIFUL FACE </span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">BEST HAIR & MAKEUP </span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div class="m-2 flex justify-center items-center">
+            <span class="lg:text-base text-base text-yellow-500">SOCIAL MEDIA GENIUS </span>
+            <p class="text-slate-600 text-sm lg:text-base"> – 1st 2nd & 3rd</p>
+        </div>
+        <div>
+            <button class="px-8 my-5 bg-yellow-500 py-2 text-white">
+                <i><a href="####"></a></i>
+                SEE PROGRAM BOOK
+            </button>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">ELIGIBILITY</span>
+            <p class="text-slate-600 text-base lg:text-lg"> Contestants must be natural born males and females within
+                the age range of 18 to 35 and 18 to 28 for female and 18 to 30 for Male. Contestants may be from
+                Eastlands Nairobi and not married at the time of application.
+            </p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">FREE OF CHARGE ENTRY</span>
+            <p class="text-slate-600 text-base lg:text-lg">Due to substantial support and donations we secure from
+                local, national and international sponsors, MISS EASTLANDS is offering a free-of-charge entry into the
+                pageant for all interested candidates.
+            </p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">FUNDRAISING CHARITY EVENTS</span>
+            <p class="text-slate-600 text-base lg:text-lg">You are welcome to organize any number of Charity Fundraising
+                events using the MISS EASTLANDS ORGANIZATION platform as long as you donate at least 70% of the proceeds
+                to the charitable causes of your choice. The rest of the funds can be used to cover the expenses of the
+                event and your journey. The receipt of the amount donated to Charity is required by MISS EASTLANDS
+                ORGANIZATION. You can raise donations not only before the finals but for the whole one year after it.
+            </p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">RAISE SPONSORSHIP MONEY FOR YOU, MORE THAN
+                YOU NEED</span>
+            <p class="text-slate-600 text-base lg:text-lg">You can raise donations for you, that’s your money to
+                use. There’s no limit to how much you can raise! The nice, unique advantage you have is that you have
+                all the months before the finals to raise funds and you have one year after the finals to raise even
+                more funds. This gives you a lot of time to raise a large amount of funds for you. Funds are for you to
+                use for thing you need to build your future, use it for your education, for your business, etc. We give
+                you a 45 min training on how to easily get sponsorship donations from people you know and from large
+                companies. If you follow our system, your dresses, evening gown, swimsuit, jewelry, shoes, and more, can
+                be covered by designers. For designers, this is an opportunity for valuable international exposure.
+            </p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">MISS EASTLANDS® ROSTER</span>
+            <p class="text-slate-600 text-base lg:text-lg">Upon joining MISS EASTLANDS® delegates gain long-term
+                membership to the MISS EASTLANDS® roster. Contestants remain members year after year and have the option
+                of participating in paid and volunteer humanitarian projects worldwide through various local, national
+                and world development agencies.
+            </p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">DEVELOPMENT PROGRAM</span>
+            <p class="text-slate-600 text-base lg:text-lg">MISS EASTLANDS® Development Program helps contestants build
+                valuable life skills through empowerment coaching. As a student of the program and a fixture on the MISS
+                EASTLANDS® roster, you will gain the knowledge, experience, and exposure needed to successfully attain
+                jobs and training, and secure lucrative side projects that cater to and capitalize on your interests,
+                hobbies and talents. Our Development Program gives you access to weekly or bi-weekly online teachings
+                from world-renowned leadership coaches like Terry Mungai of Ashleys Hair and Beauty Academy, Pamela
+                Gatwiri of PAM NAIL LAQUE, and Jeffery Wilson, CEO and Founder of JW Show. We live in an era where
+                formal education needs to be complemented by auxiliary experiences and accomplishments in order to stay
+                competitive in this highly meritocratic society. Life is indeed a continuum along which one must
+                constantly improve hard and soft skills, and upgrade and expand knowledge and scope of experience. The
+                Development Program is our way of nurturing our delegates’ habit of pro-longed self-betterment. At the
+                finals you will receive a CERTIFICATE OF COMPLETION OF THE DEVELOPMENT PROGRAM. This certificate will
+                carry a lot of weight when you apply for jobs or prospecting for business, it will set you apart from
+                other applications.
+            </p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">SWIMSUIT COMPETITION</span>
+            <p class="text-slate-600 text-base lg:text-lg">The swimsuit competition is a prominent segment of the MISS
+                EASTLANDS® pageant as most of our prospective delegates are committed to health and fitness. We provide
+                exceptions for girls that cannot participate in the swimsuit competition with no judging scores
+                deducted. In other words, you don’t get penalized for not participating. Swimsuits can be traditional,
+                or they can reflect the active wear trend as long as they consist of a short top and a short bottom. You
+                are also welcome to use one piece swimwear.
+            </p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">HAVE A BUSINESS? WE’LL HELP YOU PROMOTE IT—OR
+                SUPPORT YOU AS YOU LAUNCH YOUR OWN START-UP!</span>
+            <p class="text-slate-600 text-base lg:text-lg">If a contestant has a business, MISS EASTLANDS® will help
+                promote it. Not only does pageant participation allow for priceless national and international
+                networking, MISS EASTLANDS® will grant you a free 1⁄4 page color advertisement in its digital program
+                book, which reaches 200 000 viewers and is growing fast. MISS EASTLANDS® will also feature your logo and
+                live link on the MISS EASTLANDS® website and Facebook pages for the duration of your pageant year and
+                one more year. You could attract business from other delegates and their families and friends,
+                especially if you’ve given them an incentive to use your goods and services. In an entrepreneurial
+                spirit, MISS EASTLANDS® actively encourages and supports contestants interested in launching their own
+                businesses.
+            </p>
+        </div>
+        <div class="mt-10 w-[90%]">
+            <span class="lg:text-xl text-lg text-yellow-500 font-semibold">TO APPLY</span>
+            <p class="text-slate-600 text-base lg:text-lg">Secure your place in the MISS EASTLANDS® Pageant by
+                completing our electronic application form at Ksh. 200 only. Please note that if you have been
+                interviewed and accepted as a MISS EASTLANDS® contestant in a previous year or if you are a former
+                contestant of MR & MISS EASTLANDS® you are still eligible for to apply. After you apply, you will be
+                invited to two telephone interviews within two weeks of your application’s submission date, and right
+                after that, you will know if you’ll be gracing the stage on crowning day!
+            </p>
+            <p class="text-slate-600 text-base lg:text-lg my-10">Our pageant provides you with a powerful platform that will advance your career to a higher level!
+            </p>
+        </div>
+    </div>
+    <!-- _____________________________Section 5 Starts Here______________________ -->
+
+
+
+  <!-- footer -->
+  <!--______________________ Section 04 Ends Here _______________________-->
+
+
+
+
+  <div class="bg-purple-700 mt-12">
+    <ul class="list-none flex items-center p-4 justify-around">
+      <li class="h-6 text-white text-2xl"><i class="fa fa-crown"></i></li>
+      <li class="text-sm ml-4 lg:ml-0 text-white">
+        The Search Is On For FACE OF EASTLANDS 2022. Just Complete A Short
+        Form To Get Started.
+      </li>
+      <li>
+        <button class="bg-black hidden lg:block py-3 px-4 text-white">
+          ENTER COMPETITION
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ___________________________________Fotter _______________________________ -->
+
+  <div class=" bg-black text-white flex flex-wrap justify-around py-20">
+
+    <div style="width: 33%; background-color: #3d3d3d4c; border: 1px solid white;" class="py-5 px-3">
+      <img src="../images/logo.png" width="300px" alt="" />
+      <p class="lg:text-lg md:text-lg text-sm text-gray-600 mt-5">
+        Our work is about inspiring and engaging others to make a change in
+        the community at local level. It’s a collaboration between us,
+        social entrepreneurs-corporates,individuals, and civil society
+        organisations.
+      </p>
+    </div>
+
+    <div>
+      <h1 class="text-xl text-yellow-700">QUICK LINKS</h1>
+      <ul>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Competition
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Shop Miss EastlandSmile
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Interviews
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          News & Announcements
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Volunteer
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Sponsorship
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Resource Portal
+        </li>
+      </ul>
+    </div>
+
+
+
+
+    <div>
+      <h1 class="text-xl text-yellow-700">FACE OF EASTLANDS</h1>
+      <ul>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Competition
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Shop Miss EastlandSmile
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Interviews
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          News & Announcements
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Volunteer
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Sponsorship
+        </li>
+        <li>
+          <i class="fa fa-long-arrow-right"></i> The
+          Resource Portal
+        </li>
+      </ul>
+    </div>
+
+
+
+    <div>
+      <h1 class="text-xl text-yellow-700">CONTACT US</h1>
+      <ul>
+        <li>
+          <i class="fa-sharp fa-solid fa-location-dot leading-loose p-1" style="color: #bc8a00;"></i>The
+          Competition
+        </li>
+        <li>
+          <i class="fa-sharp fa-solid fa-envelope leading-loose p-1" style="color: #bc8a00;"></i>The
+          Shop Miss EastlandSmile
+        </li>
+        <li>
+          <i class="fa-sharp fa-solid fa-phone leading-loose p-1" style="color: #bc8a00;"></i> The
+          Interviews
+        </li>
+
+
+      </ul>
+
+    </div>
+
+
+
+  </div>
+
+  <div class="h-14 bg-black py-3">
+    <hr />
+    <div class="flex justify-around text-white ">
+      <div>
+        <h1 class="lg:text-lg md:text-lg text-sm">© Copyright 2023 Miss Eastlands. All Rights Reserved. Designed by Rick
+          <br /> +254727881462
+        </h1>
+      </div>
+      <div>
+        <ul class="flex gap-5 lg:text-lg md:text-lg text-sm">
+          <li>Leadership & Staff</li>
+          <li>Our History</li>
+          <li>Blog</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleAccordion(id) {
+      const accordionItem = document.getElementById(id);
+      const accordionContent =
+        accordionItem.querySelector(".accordion-content");
+
+      accordionItem.classList.toggle("active");
+      accordionContent.style.display =
+        accordionContent.style.display === "block" ? "none" : "block";
+    }
+  </script>
+  <script type="module" src="/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+</body>
+
+</html>
